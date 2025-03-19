@@ -1288,6 +1288,21 @@ const WellsFargoDashboard = () => {
           </div>
         </div>
 
+        {/* Key Insights for Wells Fargo */}
+        <div className="bg-white p-6 rounded-lg shadow mb-8">
+          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
+          <div className="space-y-4 mb-6">
+            {data.millennials.keyInsights.map((insight, index) => (
+              <div key={index} className="flex items-start">
+                <div className="flex-shrink-0 h-6 w-6 bg-[#0088FE]/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-[#0088FE] font-semibold">{index + 1}</span>
+                </div>
+                <p className="text-gray-700">{insight}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Key Insights & Opportunity */}
         <div className="bg-[#0088FE]/10 p-4 rounded-lg">
           <h3 className="font-bold text-[#0088FE] mb-2">Wells Fargo Opportunity</h3>
@@ -1329,7 +1344,7 @@ const WellsFargoDashboard = () => {
             {/* Elimino la sección de Avg Sentiment adicional */}
           </div>
 
-          <div className="bg-[#0088FE]/10 p-4 rounded-lg">
+          <div className="bg-[#00C49F]/10 p-4 rounded-lg">
             <h3 className="font-bold mb-2">Primary Financial Concern</h3>
             <p>Building credit history and saving</p>
           </div>
@@ -1697,8 +1712,8 @@ const WellsFargoDashboard = () => {
           </div>
         </div>
 
-        {/* Key Insights & Opportunity */}
-        <div className="bg-white p-6 rounded-lg shadow">
+        {/* Key Insights for Wells Fargo */}
+        <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
           <div className="space-y-4 mb-6">
             {data.genZ.keyInsights.map((insight, index) => (
@@ -1710,13 +1725,14 @@ const WellsFargoDashboard = () => {
               </div>
             ))}
           </div>
-          
-          <div className="bg-[#00C49F]/10 p-4 rounded-lg">
-            <h3 className="font-bold text-[#00C49F] mb-2">Wells Fargo Opportunity</h3>
-            <p className="text-sm text-gray-700">
-              Create entry-level financial tools with educational components that help Gen Z build credit and invest with minimal barriers. Focus on gamified experiences that provide immediate feedback, incorporate social elements, and offer transparent fee structures with ethical banking practices that align with their values. Short-form video content will be most effective for education.
-            </p>
-          </div>
+        </div>
+        
+        {/* Wells Fargo Opportunity */}
+        <div className="bg-[#00C49F]/10 p-4 rounded-lg">
+          <h3 className="font-bold text-[#00835F] mb-2">Wells Fargo Opportunity</h3>
+          <p className="text-sm text-gray-700">
+            Create entry-level financial tools with educational components that help Gen Z build credit and invest with minimal barriers. Focus on gamified experiences that provide immediate feedback, incorporate social elements, and offer transparent fee structures with ethical banking practices that align with their values. Short-form video content will be most effective for education.
+          </p>
         </div>
       </div>
     );
@@ -1752,7 +1768,7 @@ const WellsFargoDashboard = () => {
             {/* Elimino la sección de Avg Sentiment adicional */}
           </div>
 
-          <div className="bg-[#0088FE]/10 p-4 rounded-lg">
+          <div className="bg-[#FFBB28]/10 p-4 rounded-lg">
             <h3 className="font-bold mb-2">Primary Financial Concern</h3>
             <p>Family financial coordination</p>
           </div>
@@ -2119,9 +2135,24 @@ const WellsFargoDashboard = () => {
           </div>
         </div>
 
+        {/* Key Insights for Wells Fargo */}
+        <div className="bg-white p-6 rounded-lg shadow mb-8">
+          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
+          <div className="space-y-4 mb-6">
+            {data.hispanics.keyInsights.map((insight, index) => (
+              <div key={index} className="flex items-start">
+                <div className="flex-shrink-0 h-6 w-6 bg-[#FFBB28]/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-[#FFBB28] font-semibold">{index + 1}</span>
+                </div>
+                <p className="text-gray-700">{insight}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Key Insights & Opportunity */}
-        <div className="bg-[#0088FE]/10 p-4 rounded-lg">
-          <h3 className="font-bold text-[#0088FE] mb-2">Wells Fargo Opportunity</h3>
+        <div className="bg-[#fdb833]/10 p-4 rounded-lg">
+          <h3 className="font-bold text-[#8B4513] mb-2">Wells Fargo Opportunity</h3>
           <p className="text-sm text-gray-700">
             Position Wells Fargo as a partner in balancing present enjoyment with future security through goal-based tools, automated investing options, and debt optimization strategies that respect Hispanic customers' desire for financial freedom and security.
           </p>
@@ -2160,7 +2191,7 @@ const WellsFargoDashboard = () => {
             {/* Elimino la sección de Avg Sentiment adicional */}
           </div>
 
-          <div className="bg-[#0088FE]/10 p-4 rounded-lg">
+          <div className="bg-[#FF8042]/10 p-4 rounded-lg">
             <h3 className="font-bold mb-2">Primary Financial Concern</h3>
             <p>Managing cash flow and business growth</p>
           </div>
@@ -2174,12 +2205,7 @@ const WellsFargoDashboard = () => {
               <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
                   <Pie
-                    data={[
-                      { name: 'Growth', value: 24 },
-                      { name: 'Security', value: 26 },
-                      { name: 'Control', value: 32 },
-                      { name: 'Daily Focus', value: 18 }
-                    ]}
+                    data={data.smallbusiness.moneyMind}
                     cx="50%"
                     cy="50%"
                     outerRadius={100}
@@ -2188,6 +2214,10 @@ const WellsFargoDashboard = () => {
                     dataKey="value"
                     paddingAngle={2}
                     labelLine={false}
+                    isAnimationActive={CHART_CONFIG.animation.isActive}
+                    animationBegin={CHART_CONFIG.animation.begin}
+                    animationDuration={CHART_CONFIG.animation.duration}
+                    animationEasing={CHART_CONFIG.animation.easing}
                     label={({ name, value, percent, cx, cy, midAngle, innerRadius, outerRadius }) => {
                       const RADIAN = Math.PI / 180;
                       const radius = outerRadius * 1.1;
@@ -2221,10 +2251,10 @@ const WellsFargoDashboard = () => {
             </div>
             <div className="md:w-1/2 pl-6 flex flex-col justify-center space-y-4 mt-4 md:mt-0">
               <p className="text-sm text-gray-700 mb-4">
-                <span className="font-bold">Key findings:</span> Small business owners show a strong focus on growth (24%) and control (32%), with a balanced approach to security (26%). Daily focus (18%) indicates attention to immediate financial needs.
+                <span className="font-bold">Key findings:</span> Small business owners show the highest desire for control in their financial picture.
               </p>
               <p className="text-sm text-gray-700">
-                <span className="font-bold">Interpretation:</span> This segment prioritizes growth opportunities while maintaining a balanced approach to financial management, reflecting their business stage and desire for financial stability.
+                <span className="font-bold">Interpretation:</span> This segment values specialized expertise that understands their specific industry challenges.
               </p>
             </div>
           </div>
@@ -2314,7 +2344,7 @@ const WellsFargoDashboard = () => {
                     <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Efficient transaction processing with lower fees and faster settlement
+                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Tools that distinguish between personal and business finances
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -2322,130 +2352,11 @@ const WellsFargoDashboard = () => {
                     <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Value specialized expertise that understands their specific industry challenges
+                    <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Appreciate both digital efficiency and relationship-based service options
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* How Small Businesses Manage Their Money */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">How Small Businesses Manage Their Money</h2>
-          
-          <div className="grid grid-cols-2 gap-6">
-            {/* Strategy 1 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">1</span>
-                </div>
-                <h3 className="font-semibold text-lg">Digital tools and automation are preferred management methods</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Strong preference for all-in-one financial apps that consolidate accounts, bills, and goals in a single dashboard
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+12%</p>
-              </div>
-            </div>
-
-            {/* Strategy 2 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">2</span>
-                </div>
-                <h3 className="font-semibold text-lg">Struggle to balance current lifestyle with future saving goals</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Need visualization tools that show long-term impact of small daily spending decisions on major goals
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-red-600">-5%</p>
-              </div>
-            </div>
-
-            {/* Strategy 3 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">3</span>
-                </div>
-                <h3 className="font-semibold text-lg">Combining multiple financial tools</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Using budgeting apps alongside banking tools to manage different aspects of their finances
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+8%</p>
-              </div>
-            </div>
-
-            {/* Strategy 4 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">4</span>
-                </div>
-                <h3 className="font-semibold text-lg">Value-based investing</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Prefer to invest in companies and funds aligned with their social and environmental values
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Small Business Financial Strategy Insights */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">Small Business Financial Strategy Insights</h2>
-          
-          {/* Relationship with Money */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Relationship with Money</h3>
-            <p className="text-gray-700 mb-2">Money is seen as a tool for growth and stability</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+15%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Small business owners prioritize growth opportunities while maintaining a balanced approach to financial management, reflecting their business stage and desire for financial stability.
-            </p>
-          </div>
-
-          {/* Money Management */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Money Management</h3>
-            <p className="text-gray-700 mb-2">Digital tools and automation are preferred management methods</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+28%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Strong preference for digital banking solutions that offer automation and comprehensive financial tracking capabilities
-            </p>
-          </div>
-
-          {/* Growth Strategies */}
-          <div className="bg-white p-6 rounded-lg">
-            <h3 className="font-bold text-lg mb-2">Growth Strategies</h3>
-            <p className="text-gray-700 mb-2">Struggle to balance current lifestyle with future growth</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-red-600">-5%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Need better tools and strategies to manage the balance between enjoying current lifestyle and meeting long-term growth goals
-            </p>
           </div>
         </div>
 
@@ -2457,7 +2368,7 @@ const WellsFargoDashboard = () => {
           <div className="bg-blue-50 p-6 rounded-lg mb-6 border border-gray-200">
             <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding Product Relevance:</h3>
             <p className="text-sm text-gray-700">
-              Product relevance measures how well a banking product or service addresses the specific financial needs and pain points of this segment. Higher percentages (80-100%) indicate "must-have" products that strongly align with small business financial behaviors and goals.
+              Product relevance measures how well a banking product or service addresses the specific financial needs and pain points of this segment. Higher percentages (80-100%) indicate "must-have" products that strongly align with Small Business financial behaviors and goals.
             </p>
           </div>
 
@@ -2528,8 +2439,8 @@ const WellsFargoDashboard = () => {
           </div>
         </div>
 
-        {/* Key Insights & Opportunity */}
-        <div className="bg-white p-6 rounded-lg shadow">
+        {/* Key Insights for Wells Fargo */}
+        <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
           <div className="space-y-4 mb-6">
             {data.smallbusiness.keyInsights.map((insight, index) => (
@@ -2541,13 +2452,14 @@ const WellsFargoDashboard = () => {
               </div>
             ))}
           </div>
-          
-          <div className="bg-[#FFBB28]/10 p-4 rounded-lg">
-            <h3 className="font-bold text-[#FFBB28] mb-2">Wells Fargo Opportunity</h3>
-            <p className="text-sm text-gray-700">
-              Create entry-level financial tools with educational components that help small business owners manage cash flow and grow their business. Focus on gamified experiences that provide immediate feedback, incorporate social elements, and offer transparent fee structures with ethical banking practices that align with their values. Short-form video content will be most effective for education.
-            </p>
-          </div>
+        </div>
+        
+        {/* Wells Fargo Opportunity */}
+        <div className="bg-[#FF8042]/10 p-4 rounded-lg">
+          <h3 className="font-bold text-[#CC4000] mb-2">Wells Fargo Opportunity</h3>
+          <p className="text-sm text-gray-700">
+            Create entry-level financial tools with educational components that help small business owners manage cash flow and grow their business. Focus on gamified experiences that provide immediate feedback, incorporate social elements, and offer transparent fee structures with ethical banking practices that align with their values. Short-form video content will be most effective for education.
+          </p>
         </div>
       </div>
     );
@@ -2583,7 +2495,7 @@ const WellsFargoDashboard = () => {
             {/* Elimino la sección de Avg Sentiment adicional */}
           </div>
 
-          <div className="bg-[#0088FE]/10 p-4 rounded-lg">
+          <div className="bg-[#8884d8]/10 p-4 rounded-lg">
             <h3 className="font-bold mb-2">Primary Financial Concern</h3>
             <p>Building wealth and managing investments</p>
           </div>
@@ -2951,9 +2863,24 @@ const WellsFargoDashboard = () => {
           </div>
         </div>
 
+        {/* Key Insights for Wells Fargo */}
+        <div className="bg-white p-6 rounded-lg shadow mb-8">
+          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
+          <div className="space-y-4 mb-6">
+            {data.emergingaffluent.keyInsights.map((insight, index) => (
+              <div key={index} className="flex items-start">
+                <div className="flex-shrink-0 h-6 w-6 bg-[#8884d8]/10 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-[#8884d8] font-semibold">{index + 1}</span>
+                </div>
+                <p className="text-gray-700">{insight}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Key Insights & Opportunity */}
-        <div className="bg-[#0088FE]/10 p-4 rounded-lg">
-          <h3 className="font-bold text-[#0088FE] mb-2">Wells Fargo Opportunity</h3>
+        <div className="bg-[#8884d8]/10 p-4 rounded-lg">
+          <h3 className="font-bold text-[#5552A6] mb-2">Wells Fargo Opportunity</h3>
           <p className="text-sm text-gray-700">
             Position Wells Fargo as a partner in balancing present enjoyment with future security through goal-based tools, automated investing options, and debt optimization strategies that respect Emerging Affluent customers' desire for financial freedom and security.
           </p>
