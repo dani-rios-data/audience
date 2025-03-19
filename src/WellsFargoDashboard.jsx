@@ -903,27 +903,71 @@ const WellsFargoDashboard = () => {
             <div className="flex space-x-8">
               <div>
                 <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">1,240</p>
+                <p className="text-2xl font-bold">500</p>
+                <span className="text-xs text-gray-500">survey participants</span>
               </div>
               <div>
                 <span className="text-sm text-gray-600">Age Range</span>
                 <p className="text-2xl font-bold">28-42</p>
+                <span className="text-xs text-gray-500">millennial generation</span>
               </div>
               <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.millennials.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.millennials.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.millennials.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
+                <span className="text-sm text-gray-600">Average Age</span>
+                <p className="text-2xl font-bold">35.2</p>
+                <span className="text-xs text-gray-500">years</span>
               </div>
             </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
+          </div>
+
+          <div className="grid grid-cols-3 gap-6 mb-6">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-bold mb-2 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+                Gender Distribution
+              </h3>
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-sm mb-1">Male</p>
+                  <p className="text-lg font-bold">254 (50.8%)</p>
+                </div>
+                <div>
+                  <p className="text-sm mb-1">Female</p>
+                  <p className="text-lg font-bold">246 (49.2%)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-bold mb-2 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+                Device Usage
+              </h3>
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-sm mb-1">iOS</p>
+                  <p className="text-lg font-bold">260 (52.0%)</p>
+                </div>
+                <div>
+                  <p className="text-sm mb-1">Android</p>
+                  <p className="text-lg font-bold">240 (48.0%)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="font-bold mb-2">Avg Sentiment</h3>
+              <p className="text-2xl font-bold text-green-600">+10.3%</p>
+              <span className="text-xs text-gray-500">Slightly positive attitude toward financial matters</span>
+            </div>
           </div>
 
           <div className="bg-[#0088FE]/10 p-4 rounded-lg">
             <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Managing student debt while saving</p>
+            <p>"Managing student debt while saving" - highlighting the dual challenge millennials face</p>
           </div>
         </div>
 
@@ -1066,7 +1110,7 @@ const WellsFargoDashboard = () => {
                     <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(1) What does money mean to you?:</span> Money is seen as a tool for experiences rather than possessions
+                    <span className="font-semibold">Q(1) What does money mean to you?:</span> Money is seen primarily as security and a means for basic needs
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -1074,16 +1118,68 @@ const WellsFargoDashboard = () => {
                     <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Digital tools and automation are preferred management methods
+                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Basic budgeting and higher income are viewed as key factors
                   </p>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#D71E28] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
                     <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Struggle to balance current lifestyle with future saving goals
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Sample Survey Responses */}
+          <div className="mt-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 className="font-bold text-lg mb-4 text-gray-900">Sample Survey Responses</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Q1 Responses */}
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-md mb-3 text-blue-700">What does money mean to you?</h4>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"A means of living"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Life"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"It means something that lets us live everyday"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Safety"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"It means security. Less stress about where basic needs will come from"</p>
+                </div>
+                <div className="mt-3 text-right">
+                  <span className="inline-block px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">+23.6% sentiment</span>
+                </div>
+              </div>
+              
+              {/* Q2 Responses */}
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-md mb-3 text-blue-700">What makes managing your money easier?</h4>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Budgeting"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Having money"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"I save it until I need it"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Having more of it"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Well it's easier that we don't have a lot of it to manage"</p>
+                </div>
+                <div className="mt-3 text-right">
+                  <span className="inline-block px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">+12.2% sentiment</span>
+                </div>
+              </div>
+              
+              {/* Q3 Responses */}
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-md mb-3 text-blue-700">What tricks help you make your money last?</h4>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Coupons and discounts"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Not browsing"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"I don't pay too much attention to things I don't need"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"Thinking about money as time"</p>
+                  <p className="text-sm text-gray-700 border-l-2 border-blue-200 pl-3">"I'm incredibly frugal and rarely buy wants"</p>
+                </div>
+                <div className="mt-3 text-right">
+                  <span className="inline-block px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">-5.0% sentiment</span>
                 </div>
               </div>
             </div>
@@ -1101,14 +1197,14 @@ const WellsFargoDashboard = () => {
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                   <span className="text-blue-600 font-semibold">1</span>
                 </div>
-                <h3 className="font-semibold text-lg">Digital tools and automation are preferred management methods</h3>
+                <h3 className="font-semibold text-lg">Basic budgeting and higher income are viewed as key factors</h3>
               </div>
               <p className="text-gray-600 ml-12 mb-2">
-                Strong preference for all-in-one financial apps that consolidate accounts, bills, and goals in a single dashboard
+                Simple budgeting practices and having more money would make management easier
               </p>
               <div className="ml-12">
                 <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+12%</p>
+                <p className="text-lg font-semibold text-green-600">+12.2%</p>
               </div>
             </div>
 
@@ -1125,7 +1221,7 @@ const WellsFargoDashboard = () => {
               </p>
               <div className="ml-12">
                 <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-red-600">-5%</p>
+                <p className="text-lg font-semibold text-red-600">-5.0%</p>
               </div>
             </div>
 
@@ -1142,7 +1238,7 @@ const WellsFargoDashboard = () => {
               </p>
               <div className="ml-12">
                 <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+8%</p>
+                <p className="text-lg font-semibold text-green-600">+8.0%</p>
               </div>
             </div>
 
@@ -1159,7 +1255,7 @@ const WellsFargoDashboard = () => {
               </p>
               <div className="ml-12">
                 <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
+                <p className="text-lg font-semibold text-green-600">+15.0%</p>
               </div>
             </div>
           </div>
@@ -1172,26 +1268,26 @@ const WellsFargoDashboard = () => {
           {/* Relationship with Money */}
           <div className="bg-white p-6 rounded-lg mb-4">
             <h3 className="font-bold text-lg mb-2">Relationship with Money</h3>
-            <p className="text-gray-700 mb-2">Money is seen as a tool for experiences rather than possessions</p>
+            <p className="text-gray-700 mb-2">Money is seen primarily as security and a means for basic needs</p>
             <div className="flex items-center mb-2">
               <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+15%</span>
+              <span className="text-lg font-semibold text-green-600">+23.6%</span>
             </div>
             <p className="text-gray-600 text-sm">
-              Millennials prioritize spending on experiences that create lasting memories while maintaining a balanced approach to saving
+              Millennials view money as a necessity for security and reducing stress around basic needs rather than for experiences or possessions
             </p>
           </div>
 
           {/* Money Management */}
           <div className="bg-white p-6 rounded-lg mb-4">
             <h3 className="font-bold text-lg mb-2">Money Management</h3>
-            <p className="text-gray-700 mb-2">Digital tools and automation are preferred management methods</p>
+            <p className="text-gray-700 mb-2">Basic budgeting and higher income are viewed as key factors</p>
             <div className="flex items-center mb-2">
               <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+28%</span>
+              <span className="text-lg font-semibold text-green-600">+12.2%</span>
             </div>
             <p className="text-gray-600 text-sm">
-              Strong preference for digital banking solutions that offer automation and comprehensive financial tracking capabilities
+              Many express that simple budgeting practices and having more money would make management easier, suggesting a need for both financial education and income growth
             </p>
           </div>
 
@@ -1201,7 +1297,7 @@ const WellsFargoDashboard = () => {
             <p className="text-gray-700 mb-2">Struggle to balance current lifestyle with future saving goals</p>
             <div className="flex items-center mb-2">
               <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-red-600">-5%</span>
+              <span className="text-lg font-semibold text-red-600">-5.0%</span>
             </div>
             <p className="text-gray-600 text-sm">
               Need better tools and strategies to manage the balance between enjoying current lifestyle and meeting long-term financial goals
@@ -1217,7 +1313,7 @@ const WellsFargoDashboard = () => {
           <div className="bg-blue-50 p-6 rounded-lg mb-6 border border-gray-200">
             <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding Product Relevance:</h3>
             <p className="text-sm text-gray-700">
-              Product relevance measures how well a banking product or service addresses the specific financial needs and pain points of this segment. Higher percentages (80-100%) indicate "must-have" products that strongly align with Millennial financial behaviors and goals.
+              Product Relevance Understanding: Measures how well a banking product addresses the specific financial needs and pain points of millennials
             </p>
           </div>
 
@@ -1226,7 +1322,12 @@ const WellsFargoDashboard = () => {
               <div className="h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
-                    data={data.millennials.relevantProducts}
+                    data={[
+                      { name: "Goal-based savings tools", relevance: 85, description: "Tools that visualize progress toward specific goals" },
+                      { name: "Automated investing", relevance: 78, description: "Simple, low-cost entry to investing markets" },
+                      { name: "Subscription management", relevance: 72, description: "Tools to track and manage recurring expenses" },
+                      { name: "Debt optimization", relevance: 68, description: "Strategies to manage and reduce various debts" }
+                    ]}
                     margin={{ top: 20, right: 80, left: 120, bottom: 20 }}
                     layout="horizontal"
                     barSize={60}
@@ -1237,7 +1338,7 @@ const WellsFargoDashboard = () => {
                     />
                     <YAxis
                       type="number"
-                      domain={calculateDomain(data.millennials.relevantProducts, 'relevance')}
+                      domain={[0, 100]}
                       tickFormatter={(value) => `${value}%`}
                       tick={{ fontSize: 12 }}
                     />
@@ -1262,7 +1363,7 @@ const WellsFargoDashboard = () => {
                         fontSize: 12
                       }}
                     >
-                      {data.millennials.relevantProducts.map((entry, index) => (
+                      {[0, 1, 2, 3].map((index) => (
                         <Cell key={`cell-${index}`} fill={`${COLORS.blue}${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
                       ))}
                     </Bar>
@@ -1273,16 +1374,38 @@ const WellsFargoDashboard = () => {
             <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
               <h3 className="font-bold text-lg mb-4 text-gray-900">Product Impact Analysis</h3>
               <div className="space-y-4">
-                {data.millennials.relevantProducts.map((product, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 h-5 w-5 mt-1">
-                      <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
-                    </div>
-                    <p className="ml-3 text-sm text-gray-900">
-                      <span className="font-semibold">{product.name}:</span> {product.description}
-                    </p>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 mt-1">
+                    <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
                   </div>
-                ))}
+                  <p className="ml-3 text-sm text-gray-900">
+                    <span className="font-semibold">Goal-based savings tools:</span> Tools that visualize progress toward specific goals
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 mt-1">
+                    <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
+                  </div>
+                  <p className="ml-3 text-sm text-gray-900">
+                    <span className="font-semibold">Automated investing:</span> Simple, low-cost entry to investing markets
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 mt-1">
+                    <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
+                  </div>
+                  <p className="ml-3 text-sm text-gray-900">
+                    <span className="font-semibold">Subscription management:</span> Tools to track and manage recurring expenses
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 mt-1">
+                    <div className="w-2 h-2 bg-[#0088FE] rounded-full"></div>
+                  </div>
+                  <p className="ml-3 text-sm text-gray-900">
+                    <span className="font-semibold">Debt optimization:</span> Strategies to manage and reduce various debts
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1292,14 +1415,30 @@ const WellsFargoDashboard = () => {
         <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
           <div className="space-y-4 mb-6">
-            {data.millennials.keyInsights.map((insight, index) => (
-              <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 bg-[#0088FE]/10 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#0088FE] font-semibold">{index + 1}</span>
-                </div>
-                <p className="text-gray-700">{insight}</p>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 h-6 w-6 bg-[#0088FE]/10 rounded-full flex items-center justify-center mr-3">
+                <span className="text-[#0088FE] font-semibold">1</span>
               </div>
-            ))}
+              <p className="text-gray-700">Millennials show strong interest in goal-tracking tools that help balance current enjoyment with future security</p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 h-6 w-6 bg-[#0088FE]/10 rounded-full flex items-center justify-center mr-3">
+                <span className="text-[#0088FE] font-semibold">2</span>
+              </div>
+              <p className="text-gray-700">They value transparency in banking and want to understand fee structures clearly</p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 h-6 w-6 bg-[#0088FE]/10 rounded-full flex items-center justify-center mr-3">
+                <span className="text-[#0088FE] font-semibold">3</span>
+              </div>
+              <p className="text-gray-700">Digital-first approach is essential, with 92% preferring to handle finances via mobile app</p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 h-6 w-6 bg-[#0088FE]/10 rounded-full flex items-center justify-center mr-3">
+                <span className="text-[#0088FE] font-semibold">4</span>
+              </div>
+              <p className="text-gray-700">Investment tools with educational components address their desire to grow wealth while learning</p>
+            </div>
           </div>
         </div>
 
@@ -1317,422 +1456,9 @@ const WellsFargoDashboard = () => {
   const renderGenZTab = () => {
     return (
       <div>
-        {/* Header Section */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-2">Gen Z Money Mind Analysis</h2>
           <p className="text-sm text-gray-600 mb-4">Understanding how Gen Z thinks about and manages their finances</p>
-          
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex space-x-8">
-              <div>
-                <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">390</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg. Age</span>
-                <p className="text-2xl font-bold">21</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.genZ.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.genZ.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.genZ.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
-              </div>
-            </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
-          </div>
-
-          <div className="bg-[#00C49F]/10 p-4 rounded-lg">
-            <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Building credit history and saving</p>
-          </div>
-        </div>
-
-        {/* Money Mind Factors */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Money Mind Factors</h2>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2">
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={[
-                      { name: 'Growth', value: 35 },
-                      { name: 'Security', value: 20 },
-                      { name: 'Control', value: 20 },
-                      { name: 'Daily Focus', value: 25 }
-                    ]}
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={100}
-                    innerRadius={60}
-                    fill="#8884d8"
-                    dataKey="value"
-                    paddingAngle={2}
-                    labelLine={false}
-                    label={({ name, value, percent, cx, cy, midAngle, innerRadius, outerRadius }) => {
-                      const RADIAN = Math.PI / 180;
-                      const radius = outerRadius * 1.1;
-                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                      return (
-                        <text 
-                          x={x} 
-                          y={y} 
-                          fill={name === 'Growth' ? COLORS.moneyMind.growth : 
-                               name === 'Security' ? COLORS.moneyMind.security : 
-                               name === 'Control' ? COLORS.moneyMind.control : 
-                               COLORS.moneyMind.daily}
-                          textAnchor={x > cx ? 'start' : 'end'} 
-                          dominantBaseline="central"
-                          fontWeight="bold"
-                        >
-                          {`${name}: ${value}%`}
-                        </text>
-                      );
-                    }}
-                  >
-                    <Cell fill={COLORS.moneyMind.growth} />   {/* Growth - Amarillo */}
-                    <Cell fill={COLORS.moneyMind.security} /> {/* Security - Rojo */}
-                    <Cell fill={COLORS.moneyMind.control} />  {/* Control - Verde */}
-                    <Cell fill={COLORS.moneyMind.daily} />    {/* Daily Focus - Gris */}
-                  </Pie>
-                  <Tooltip formatter={(value, name) => [`${value}%`, name]} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="md:w-1/2 pl-6 flex flex-col justify-center space-y-4 mt-4 md:mt-0">
-              <p className="text-sm text-gray-700 mb-4">
-                <span className="font-bold">Key findings:</span> Gen Z shows a strong preference for growth (35%) and security (20%), with a balanced approach to control (20%). Daily focus (25%) is significant but not as strong as growth orientation.
-              </p>
-              <p className="text-sm text-gray-700">
-                <span className="font-bold">Interpretation:</span> This generation is focused on building a strong financial foundation while prioritizing growth opportunities. They balance daily management needs with long-term financial planning.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Financial Management Strategies */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Financial Management Strategies</h2>
-          
-          {/* Sentiment Calculation Explanation */}
-          <div className="bg-gray-100 p-4 rounded-lg mb-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <p className="ml-3 text-sm text-gray-700">
-                <span className="font-semibold">About Sentiment Scores: </span>
-                These sentiment values were calculated using advanced AI analysis of survey responses. Our AI model evaluated the emotional tone, context, and specific language used in each participant's answers, assigning a sentiment score that reflects both the explicit and implicit attitudes towards financial management. Positive percentages indicate optimistic or confident responses, while negative values suggest areas of concern or uncertainty.
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.genZ.strategies}
-                    margin={{ top: 20, right: 80, left: 40, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.genZ.strategies, 'sentiment')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Sentiment']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="sentiment"
-                      fill={COLORS.green}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.genZ.strategies.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.sentiment > 0 ? '#00C49F' : '#D71E28'} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Sentiment Analysis</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#00C49F] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(1) What does money mean to you?:</span> Money represents freedom and future options
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#00C49F] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Highly digital approach, often using multiple apps
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#00C49F] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Micro-saving and occasional side hustles
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* How Gen Z Manages Their Money */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">How Gen Z Manages Their Money</h2>
-          
-          <div className="grid grid-cols-2 gap-6">
-            {/* Strategy 1 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#00C49F]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#00C49F] font-semibold">1</span>
-                </div>
-                <h3 className="font-semibold text-lg">Automated micro-savings</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Using apps that round up purchases and automatically transfer small amounts to savings accounts
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-
-            {/* Strategy 2 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#00C49F]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#00C49F] font-semibold">2</span>
-                </div>
-                <h3 className="font-semibold text-lg">Multiple income streams</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Combining main job with side hustles and gig economy to diversify income
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+18%</p>
-              </div>
-            </div>
-
-            {/* Strategy 3 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#00C49F]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#00C49F] font-semibold">3</span>
-                </div>
-                <h3 className="font-semibold text-lg">Collaborative consumption</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Sharing subscriptions, using second-hand platforms and sharing economy to minimize expenses
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-
-            {/* Strategy 4 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#00C49F]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#00C49F] font-semibold">4</span>
-                </div>
-                <h3 className="font-semibold text-lg">Financial community consultation</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                72% consult online forums and social media before making major financial decisions
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+12%</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Gen Z Financial Strategy Insights */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">Gen Z Financial Strategy Insights</h2>
-          
-          {/* Relationship with Money */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Relationship with Money</h3>
-            <p className="text-gray-700 mb-2">Money represents freedom and future options</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+28%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Gen Z views money as a tool for flexibility and independence rather than status, with growing anxiety about economic uncertainty
-            </p>
-          </div>
-
-          {/* Money Management */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Money Management</h3>
-            <p className="text-gray-700 mb-2">Highly digital approach, often using multiple apps</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+17%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Uses an average of 3-4 different financial apps simultaneously, preferring specialized tools over all-in-one solutions
-            </p>
-          </div>
-
-          {/* Saving Strategies */}
-          <div className="bg-white p-6 rounded-lg">
-            <h3 className="font-bold text-lg mb-2">Saving Strategies</h3>
-            <p className="text-gray-700 mb-2">Micro-saving and occasional side hustles</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-gray-600">0%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Combines multiple income streams with automated micro-saving tools that round up purchases or make small automatic transfers
-            </p>
-          </div>
-        </div>
-
-        {/* Most Relevant Banking Products */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Most Relevant Banking Products</h2>
-          
-          {/* What is Product Relevance explanation */}
-          <div className="bg-blue-50 p-6 rounded-lg mb-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding Product Relevance:</h3>
-            <p className="text-sm text-gray-700">
-              Product relevance indicates how essential a banking product or service is for meeting the specific financial needs of Gen Z. The percentage (0-100%) shows how strongly the product aligns with their financial behaviors, needs, and aspirations, with 90%+ indicating critical products that would significantly impact adoption and engagement.
-            </p>
-          </div>
-
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.genZ.relevantProducts}
-                    margin={{ top: 20, right: 80, left: 120, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.genZ.relevantProducts, 'relevance')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Relevance']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="relevance"
-                      fill={COLORS.primary}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.genZ.relevantProducts.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`${COLORS.primary}${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Product Impact Analysis</h3>
-              <div className="space-y-4">
-                {data.genZ.relevantProducts.map((product, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 h-5 w-5 mt-1">
-                      <div className="w-2 h-2 bg-[#20B2AA] rounded-full"></div>
-                    </div>
-                    <p className="ml-3 text-sm text-gray-900">
-                      <span className="font-semibold">{product.name}:</span> {product.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Key Insights for Wells Fargo */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
-          <div className="space-y-4 mb-6">
-            {data.genZ.keyInsights.map((insight, index) => (
-              <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 bg-[#00C49F]/10 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#00C49F] font-semibold">{index + 1}</span>
-                </div>
-                <p className="text-gray-700">{insight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Wells Fargo Opportunity */}
-        <div className="bg-[#00C49F]/10 p-4 rounded-lg">
-          <h3 className="font-bold text-[#00835F] mb-2">Wells Fargo Opportunity</h3>
-          <p className="text-sm text-gray-700">
-            Create entry-level financial tools with educational components that help Gen Z build credit and invest with minimal barriers. Focus on gamified experiences that provide immediate feedback, incorporate social elements, and offer transparent fee structures with ethical banking practices that align with their values. Short-form video content will be most effective for education.
-          </p>
         </div>
       </div>
     );
@@ -1741,421 +1467,9 @@ const WellsFargoDashboard = () => {
   const renderHispanicsTab = () => {
     return (
       <div>
-        {/* Hispanic Money Mind Analysis */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-2">Hispanic Money Mind Analysis</h2>
           <p className="text-sm text-gray-600 mb-4">Understanding how Hispanic customers think about and manage their finances</p>
-          
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex space-x-8">
-              <div>
-                <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">110</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg. Age</span>
-                <p className="text-2xl font-bold">36</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.hispanics.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.hispanics.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.hispanics.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
-              </div>
-            </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
-          </div>
-
-          <div className="bg-[#FFBB28]/10 p-4 rounded-lg">
-            <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Family financial coordination</p>
-          </div>
-        </div>
-
-        {/* Money Mind Factors */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Money Mind Factors</h2>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2">
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={data.hispanics.moneyMind}
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={100}
-                    innerRadius={60}
-                    fill="#8884d8"
-                    dataKey="value"
-                    paddingAngle={2}
-                    labelLine={false}
-                    isAnimationActive={CHART_CONFIG.animation.isActive}
-                    animationBegin={CHART_CONFIG.animation.begin}
-                    animationDuration={CHART_CONFIG.animation.duration}
-                    animationEasing={CHART_CONFIG.animation.easing}
-                    label={({ name, value, percent, cx, cy, midAngle, innerRadius, outerRadius }) => {
-                      const RADIAN = Math.PI / 180;
-                      const radius = outerRadius * 1.1;
-                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                      return (
-                        <text 
-                          x={x} 
-                          y={y} 
-                          fill={name === 'Growth' ? COLORS.moneyMind.growth : 
-                               name === 'Security' ? COLORS.moneyMind.security : 
-                               name === 'Control' ? COLORS.moneyMind.control : 
-                               COLORS.moneyMind.daily}
-                          textAnchor={x > cx ? 'start' : 'end'} 
-                          dominantBaseline="central"
-                          fontWeight="bold"
-                        >
-                          {`${name}: ${value}%`}
-                        </text>
-                      );
-                    }}
-                  >
-                    <Cell fill={COLORS.moneyMind.growth} />   {/* Growth - Amarillo */}
-                    <Cell fill={COLORS.moneyMind.security} /> {/* Security - Rojo */}
-                    <Cell fill={COLORS.moneyMind.control} />  {/* Control - Verde */}
-                    <Cell fill={COLORS.moneyMind.daily} />    {/* Daily Focus - Gris */}
-                  </Pie>
-                  <Tooltip formatter={(value, name) => [`${value}%`, name]} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="md:w-1/2 pl-6 flex flex-col justify-center space-y-4 mt-4 md:mt-0">
-              <p className="text-sm text-gray-700 mb-4">
-                <span className="font-bold">Key findings:</span> Hispanic customers often balance individual needs with extended family financial responsibilities.
-              </p>
-              <p className="text-sm text-gray-700">
-                <span className="font-bold">Interpretation:</span> This segment values face-to-face relationships with bankers who understand cultural context and multi-generational household considerations.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question Responses & Sentiment */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Financial Management Strategies</h2>
-          
-          {/* Sentiment Calculation Explanation */}
-          <div className="bg-gray-100 p-4 rounded-lg mb-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <p className="ml-3 text-sm text-gray-700">
-                <span className="font-semibold">About Sentiment Scores: </span>
-                These sentiment values were calculated using advanced AI analysis of survey responses. Our AI model evaluated the emotional tone, context, and specific language used in each participant's answers, assigning a sentiment score that reflects both the explicit and implicit attitudes towards financial management. Positive percentages indicate optimistic or confident responses, while negative values suggest areas of concern or uncertainty.
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.hispanics.strategies}
-                    margin={{ top: 20, right: 80, left: 40, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.hispanics.strategies, 'sentiment')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Sentiment']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="sentiment"
-                      fill={COLORS.yellow}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.hispanics.strategies.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.sentiment > 0 ? '#FFBB28' : '#D71E28'} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Sentiment Analysis</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(1) What does money mean to you?:</span> Security and family stability
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Digital tools and family coordination
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Family budgeting and shared resources
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* How Hispanics Manage Their Money */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">How Hispanics Manage Their Money</h2>
-          
-          <div className="grid grid-cols-2 gap-6">
-            {/* Strategy 1 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">1</span>
-                </div>
-                <h3 className="font-semibold text-lg">Digital tools and automation are preferred management methods</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Strong preference for all-in-one financial apps that consolidate accounts, bills, and goals in a single dashboard
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+12%</p>
-              </div>
-            </div>
-
-            {/* Strategy 2 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">2</span>
-                </div>
-                <h3 className="font-semibold text-lg">Struggle to balance current lifestyle with future saving goals</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Need visualization tools that show long-term impact of small daily spending decisions on major goals
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-red-600">-5%</p>
-              </div>
-            </div>
-
-            {/* Strategy 3 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">3</span>
-                </div>
-                <h3 className="font-semibold text-lg">Combining multiple financial tools</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Using budgeting apps alongside banking tools to manage different aspects of their finances
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+8%</p>
-              </div>
-            </div>
-
-            {/* Strategy 4 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#FFBB28]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#FFBB28] font-semibold">4</span>
-                </div>
-                <h3 className="font-semibold text-lg">Value-based investing</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Prefer to invest in companies and funds aligned with their social and environmental values
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Hispanics Financial Strategy Insights */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">Hispanics Financial Strategy Insights</h2>
-          
-          {/* Relationship with Money */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Relationship with Money</h3>
-            <p className="text-gray-700 mb-2">Money is seen as a tool for experiences rather than possessions</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+15%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Hispanics prioritize spending on experiences that create lasting memories while maintaining a balanced approach to saving
-            </p>
-          </div>
-
-          {/* Money Management */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Money Management</h3>
-            <p className="text-gray-700 mb-2">Digital tools and automation are preferred management methods</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+28%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Strong preference for digital banking solutions that offer automation and comprehensive financial tracking capabilities
-            </p>
-          </div>
-
-          {/* Saving Strategies */}
-          <div className="bg-white p-6 rounded-lg">
-            <h3 className="font-bold text-lg mb-2">Saving Strategies</h3>
-            <p className="text-gray-700 mb-2">Struggle to balance current lifestyle with future saving goals</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-red-600">-5%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Need better tools and strategies to manage the balance between enjoying current lifestyle and meeting long-term financial goals
-            </p>
-          </div>
-        </div>
-
-        {/* Most Relevant Banking Products */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Most Relevant Banking Products</h2>
-          
-          {/* What is Product Relevance explanation */}
-          <div className="bg-blue-50 p-6 rounded-lg mb-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding Product Relevance:</h3>
-            <p className="text-sm text-gray-700">
-              Product relevance measures how well a banking product or service addresses the specific financial needs and pain points of this segment. Higher percentages (80-100%) indicate "must-have" products that strongly align with Hispanic financial behaviors and goals.
-            </p>
-          </div>
-
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.hispanics.relevantProducts}
-                    margin={{ top: 20, right: 80, left: 120, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.hispanics.relevantProducts, 'relevance')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Relevance']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="relevance"
-                      fill={COLORS.yellow}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.hispanics.relevantProducts.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`${COLORS.yellow}${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Product Impact Analysis</h3>
-              <div className="space-y-4">
-                {data.hispanics.relevantProducts.map((product, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 h-5 w-5 mt-1">
-                      <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                    </div>
-                    <p className="ml-3 text-sm text-gray-900">
-                      <span className="font-semibold">{product.name}:</span> {product.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Key Insights for Wells Fargo */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
-          <div className="space-y-4 mb-6">
-            {data.hispanics.keyInsights.map((insight, index) => (
-              <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 bg-[#FFBB28]/10 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#FFBB28] font-semibold">{index + 1}</span>
-                </div>
-                <p className="text-gray-700">{insight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Key Insights & Opportunity */}
-        <div className="bg-[#fdb833]/10 p-4 rounded-lg">
-          <h3 className="font-bold text-[#8B4513] mb-2">Wells Fargo Opportunity</h3>
-          <p className="text-sm text-gray-700">
-            Position Wells Fargo as a partner in balancing present enjoyment with future security through goal-based tools, automated investing options, and debt optimization strategies that respect Hispanic customers' desire for financial freedom and security.
-          </p>
         </div>
       </div>
     );
@@ -2164,302 +1478,9 @@ const WellsFargoDashboard = () => {
   const renderSmallbusinessTab = () => {
     return (
       <div>
-        {/* Small Business Money Mind Analysis */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-2">Small Business Money Mind Analysis</h2>
           <p className="text-sm text-gray-600 mb-4">Understanding how small business owners think about and manage their finances</p>
-          
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex space-x-8">
-              <div>
-                <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">110</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg. Age</span>
-                <p className="text-2xl font-bold">36</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.smallbusiness.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.smallbusiness.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.smallbusiness.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
-              </div>
-            </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
-          </div>
-
-          <div className="bg-[#FF8042]/10 p-4 rounded-lg">
-            <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Managing cash flow and business growth</p>
-          </div>
-        </div>
-
-        {/* Money Mind Factors */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Money Mind Factors</h2>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2">
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={data.smallbusiness.moneyMind}
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={100}
-                    innerRadius={60}
-                    fill="#8884d8"
-                    dataKey="value"
-                    paddingAngle={2}
-                    labelLine={false}
-                    isAnimationActive={CHART_CONFIG.animation.isActive}
-                    animationBegin={CHART_CONFIG.animation.begin}
-                    animationDuration={CHART_CONFIG.animation.duration}
-                    animationEasing={CHART_CONFIG.animation.easing}
-                    label={({ name, value, percent, cx, cy, midAngle, innerRadius, outerRadius }) => {
-                      const RADIAN = Math.PI / 180;
-                      const radius = outerRadius * 1.1;
-                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                      return (
-                        <text 
-                          x={x} 
-                          y={y} 
-                          fill={name === 'Growth' ? COLORS.moneyMind.growth : 
-                               name === 'Security' ? COLORS.moneyMind.security : 
-                               name === 'Control' ? COLORS.moneyMind.control : 
-                               COLORS.moneyMind.daily}
-                          textAnchor={x > cx ? 'start' : 'end'} 
-                          dominantBaseline="central"
-                          fontWeight="bold"
-                        >
-                          {`${name}: ${value}%`}
-                        </text>
-                      );
-                    }}
-                  >
-                    <Cell fill={COLORS.moneyMind.growth} />   {/* Growth - Amarillo */}
-                    <Cell fill={COLORS.moneyMind.security} /> {/* Security - Rojo */}
-                    <Cell fill={COLORS.moneyMind.control} />  {/* Control - Verde */}
-                    <Cell fill={COLORS.moneyMind.daily} />    {/* Daily Focus - Gris */}
-                  </Pie>
-                  <Tooltip formatter={(value, name) => [`${value}%`, name]} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="md:w-1/2 pl-6 flex flex-col justify-center space-y-4 mt-4 md:mt-0">
-              <p className="text-sm text-gray-700 mb-4">
-                <span className="font-bold">Key findings:</span> Small business owners show the highest desire for control in their financial picture.
-              </p>
-              <p className="text-sm text-gray-700">
-                <span className="font-bold">Interpretation:</span> This segment values specialized expertise that understands their specific industry challenges.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question Responses & Sentiment */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Financial Management Strategies</h2>
-          
-          {/* Sentiment Calculation Explanation */}
-          <div className="bg-gray-100 p-4 rounded-lg mb-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <p className="ml-3 text-sm text-gray-700">
-                <span className="font-semibold">About Sentiment Scores: </span>
-                These sentiment values were calculated using advanced AI analysis of survey responses. Our AI model evaluated the emotional tone, context, and specific language used in each participant's answers, assigning a sentiment score that reflects both the explicit and implicit attitudes towards financial management. Positive percentages indicate optimistic or confident responses, while negative values suggest areas of concern or uncertainty.
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.smallbusiness.strategies}
-                    margin={{ top: 20, right: 80, left: 40, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.smallbusiness.strategies, 'sentiment')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Sentiment']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="sentiment"
-                      fill={COLORS.orange}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.smallbusiness.strategies.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.sentiment > 0 ? '#FFBB28' : '#D71E28'} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Sentiment Analysis</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(1) What does money mean to you?:</span> Managing cash flow and business growth
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Tools that distinguish between personal and business finances
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Appreciate both digital efficiency and relationship-based service options
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Most Relevant Banking Products */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Most Relevant Banking Products</h2>
-          
-          {/* What is Product Relevance explanation */}
-          <div className="bg-blue-50 p-6 rounded-lg mb-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding Product Relevance:</h3>
-            <p className="text-sm text-gray-700">
-              Product relevance measures how well a banking product or service addresses the specific financial needs and pain points of this segment. Higher percentages (80-100%) indicate "must-have" products that strongly align with Small Business financial behaviors and goals.
-            </p>
-          </div>
-
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.smallbusiness.relevantProducts}
-                    margin={{ top: 20, right: 80, left: 120, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.smallbusiness.relevantProducts, 'relevance')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Relevance']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="relevance"
-                      fill={COLORS.orange}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.smallbusiness.relevantProducts.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`${COLORS.orange}${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Product Impact Analysis</h3>
-              <div className="space-y-4">
-                {data.smallbusiness.relevantProducts.map((product, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 h-5 w-5 mt-1">
-                      <div className="w-2 h-2 bg-[#FFBB28] rounded-full"></div>
-                    </div>
-                    <p className="ml-3 text-sm text-gray-900">
-                      <span className="font-semibold">{product.name}:</span> {product.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Key Insights for Wells Fargo */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
-          <div className="space-y-4 mb-6">
-            {data.smallbusiness.keyInsights.map((insight, index) => (
-              <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 bg-[#FFBB28]/10 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#FFBB28] font-semibold">{index + 1}</span>
-                </div>
-                <p className="text-gray-700">{insight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        {/* Wells Fargo Opportunity */}
-        <div className="bg-[#FF8042]/10 p-4 rounded-lg">
-          <h3 className="font-bold text-[#CC4000] mb-2">Wells Fargo Opportunity</h3>
-          <p className="text-sm text-gray-700">
-            Create entry-level financial tools with educational components that help small business owners manage cash flow and grow their business. Focus on gamified experiences that provide immediate feedback, incorporate social elements, and offer transparent fee structures with ethical banking practices that align with their values. Short-form video content will be most effective for education.
-          </p>
         </div>
       </div>
     );
@@ -2468,440 +1489,15 @@ const WellsFargoDashboard = () => {
   const renderEmergingaffluentTab = () => {
     return (
       <div>
-        {/* Emerging Affluent Money Mind Analysis */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-2">Emerging Affluent Money Mind Analysis</h2>
-          <p className="text-sm text-gray-600 mb-4">Understanding how Emerging Affluent think about and manage their finances</p>
-          
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex space-x-8">
-              <div>
-                <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">110</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg. Age</span>
-                <p className="text-2xl font-bold">36</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.emergingaffluent.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.emergingaffluent.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.emergingaffluent.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
-              </div>
-            </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
-          </div>
-
-          <div className="bg-[#8884d8]/10 p-4 rounded-lg">
-            <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Building wealth and managing investments</p>
-          </div>
-        </div>
-
-        {/* Money Mind Factors */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Money Mind Factors</h2>
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2">
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={[
-                      { name: 'Growth', value: 40 },
-                      { name: 'Security', value: 28 },
-                      { name: 'Control', value: 22 },
-                      { name: 'Daily Focus', value: 10 }
-                    ]}
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={100}
-                    innerRadius={60}
-                    fill="#8884d8"
-                    dataKey="value"
-                    paddingAngle={2}
-                    labelLine={false}
-                    label={({ name, value, percent, cx, cy, midAngle, innerRadius, outerRadius }) => {
-                      const RADIAN = Math.PI / 180;
-                      const radius = outerRadius * 1.1;
-                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                      return (
-                        <text 
-                          x={x} 
-                          y={y} 
-                          fill={name === 'Growth' ? COLORS.moneyMind.growth : 
-                               name === 'Security' ? COLORS.moneyMind.security : 
-                               name === 'Control' ? COLORS.moneyMind.control : 
-                               COLORS.moneyMind.daily}
-                          textAnchor={x > cx ? 'start' : 'end'} 
-                          dominantBaseline="central"
-                          fontWeight="bold"
-                        >
-                          {`${name}: ${value}%`}
-                        </text>
-                      );
-                    }}
-                  >
-                    <Cell fill={COLORS.moneyMind.growth} />   {/* Growth - Amarillo */}
-                    <Cell fill={COLORS.moneyMind.security} /> {/* Security - Rojo */}
-                    <Cell fill={COLORS.moneyMind.control} />  {/* Control - Verde */}
-                    <Cell fill={COLORS.moneyMind.daily} />    {/* Daily Focus - Gris */}
-                  </Pie>
-                  <Tooltip formatter={(value, name) => [`${value}%`, name]} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="md:w-1/2 pl-6 flex flex-col justify-center space-y-4 mt-4 md:mt-0">
-              <p className="text-sm text-gray-700 mb-4">
-                <span className="font-bold">Key findings:</span> Emerging Affluent show a strong focus on growth (40%) and security (28%), with a balanced approach to control (22%). Daily focus (10%) indicates attention to immediate financial needs.
-              </p>
-              <p className="text-sm text-gray-700">
-                <span className="font-bold">Interpretation:</span> This segment prioritizes wealth building while balancing current lifestyle needs and managing investments.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question Responses & Sentiment */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Financial Management Strategies</h2>
-          
-          {/* Sentiment Calculation Explanation */}
-          <div className="bg-gray-100 p-4 rounded-lg mb-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <p className="ml-3 text-sm text-gray-700">
-                <span className="font-semibold">About Sentiment Scores: </span>
-                These sentiment values were calculated using advanced AI analysis of survey responses. Our AI model evaluated the emotional tone, context, and specific language used in each participant's answers, assigning a sentiment score that reflects both the explicit and implicit attitudes towards financial management. Positive percentages indicate optimistic or confident responses, while negative values suggest areas of concern or uncertainty.
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.emergingaffluent.strategies}
-                    margin={{ top: 20, right: 80, left: 40, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.emergingaffluent.strategies, 'sentiment')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Sentiment']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="sentiment"
-                      fill={COLORS.purple}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.emergingaffluent.strategies.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.sentiment > 0 ? '#8884d8' : '#D71E28'} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Sentiment Analysis</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#8884d8] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(1) What does money mean to you?:</span> Building wealth and managing investments
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#8884d8] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(2) What makes managing your money easier?:</span> Seeking accessible entry points to wealth management without high minimums
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 mt-1">
-                    <div className="w-2 h-2 bg-[#8884d8] rounded-full"></div>
-                  </div>
-                  <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Q(3) What tricks help you make your money last?:</span> Digital-first approach with preference for self-directed tools with expert guidance
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* How Emerging Affluent Manage Their Money */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">How Emerging Affluent Manage Their Money</h2>
-          
-          <div className="grid grid-cols-2 gap-6">
-            {/* Strategy 1 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#8884d8]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#8884d8] font-semibold">1</span>
-                </div>
-                <h3 className="font-semibold text-lg">Automated investing</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Using apps that round up purchases and automatically transfer small amounts to investment accounts
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-
-            {/* Strategy 2 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#8884d8]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#8884d8] font-semibold">2</span>
-                </div>
-                <h3 className="font-semibold text-lg">Wealth management services</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Seeking entry-level advisory services with growth-focused strategies
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+18%</p>
-              </div>
-            </div>
-
-            {/* Strategy 3 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#8884d8]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#8884d8] font-semibold">3</span>
-                </div>
-                <h3 className="font-semibold text-lg">Premium digital banking</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Seeking enhanced digital tools with financial insights and budgeting
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-
-            {/* Strategy 4 */}
-            <div className="bg-white p-6 rounded-lg">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="flex-shrink-0 w-8 h-8 bg-[#8884d8]/10 rounded-full flex items-center justify-center">
-                  <span className="text-[#8884d8] font-semibold">4</span>
-                </div>
-                <h3 className="font-semibold text-lg">Rewards credit cards</h3>
-              </div>
-              <p className="text-gray-600 ml-12 mb-2">
-                Seeking cards optimized for lifestyle spending with investment features
-              </p>
-              <div className="ml-12">
-                <p className="text-sm text-gray-500">Sentiment:</p>
-                <p className="text-lg font-semibold text-green-600">+15%</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Emerging Affluent Financial Strategy Insights */}
-        <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-6">Emerging Affluent Financial Strategy Insights</h2>
-          
-          {/* Relationship with Money */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Relationship with Money</h3>
-            <p className="text-gray-700 mb-2">Money is seen as a tool for growth and stability</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+15%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Emerging Affluent prioritize growth opportunities while maintaining a balanced approach to financial management, reflecting their growing affluence and desire for financial stability.
-            </p>
-          </div>
-
-          {/* Money Management */}
-          <div className="bg-white p-6 rounded-lg mb-4">
-            <h3 className="font-bold text-lg mb-2">Money Management</h3>
-            <p className="text-gray-700 mb-2">Digital tools and automation are preferred management methods</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-green-600">+28%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Strong preference for digital banking solutions that offer automation and comprehensive financial tracking capabilities
-            </p>
-          </div>
-
-          {/* Investment Strategies */}
-          <div className="bg-white p-6 rounded-lg">
-            <h3 className="font-bold text-lg mb-2">Investment Strategies</h3>
-            <p className="text-gray-700 mb-2">Struggle to balance current lifestyle with future growth</p>
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-gray-600 mr-2">Sentiment Score:</span>
-              <span className="text-lg font-semibold text-red-600">-5%</span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              Need better tools and strategies to manage the balance between enjoying current lifestyle and meeting long-term growth goals
-            </p>
-          </div>
-        </div>
-
-        {/* Most Relevant Banking Products */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Most Relevant Banking Products</h2>
-          
-          {/* What is Product Relevance explanation */}
-          <div className="bg-blue-50 p-6 rounded-lg mb-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding Product Relevance:</h3>
-            <p className="text-sm text-gray-700">
-              Product relevance measures how well a banking product or service addresses the specific financial needs and pain points of this segment. Higher percentages (80-100%) indicate "must-have" products that strongly align with Emerging Affluent financial behaviors and goals.
-            </p>
-          </div>
-
-          <div className="flex gap-6">
-            <div className="flex-1">
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={data.emergingaffluent.relevantProducts}
-                    margin={{ top: 20, right: 80, left: 120, bottom: 20 }}
-                    layout="horizontal"
-                    barSize={60}
-                  >
-                    <XAxis
-                      dataKey="name"
-                      tick={{ fontSize: 12 }}
-                    />
-                    <YAxis
-                      type="number"
-                      domain={calculateDomain(data.emergingaffluent.relevantProducts, 'relevance')}
-                      tickFormatter={(value) => `${value}%`}
-                      tick={{ fontSize: 12 }}
-                    />
-                    <Tooltip
-                      formatter={(value) => [`${value}%`, 'Relevance']}
-                      contentStyle={{
-                        backgroundColor: '#fff',
-                        border: '1px solid #ccc',
-                        borderRadius: '4px',
-                        padding: '8px'
-                      }}
-                    />
-                    <Bar
-                      dataKey="relevance"
-                      fill={COLORS.purple}
-                      radius={[4, 4, 0, 0]}
-                      barSize={60}
-                      label={{
-                        position: 'top',
-                        formatter: (value) => `${value}%`,
-                        fill: '#666',
-                        fontSize: 12
-                      }}
-                    >
-                      {data.emergingaffluent.relevantProducts.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`${COLORS.purple}${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-            <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Product Impact Analysis</h3>
-              <div className="space-y-4">
-                {data.emergingaffluent.relevantProducts.map((product, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 h-5 w-5 mt-1">
-                      <div className="w-2 h-2 bg-[#8884d8] rounded-full"></div>
-                    </div>
-                    <p className="ml-3 text-sm text-gray-900">
-                      <span className="font-semibold">{product.name}:</span> {product.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Key Insights for Wells Fargo */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4">Key Insights for Wells Fargo</h2>
-          <div className="space-y-4 mb-6">
-            {data.emergingaffluent.keyInsights.map((insight, index) => (
-              <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 bg-[#8884d8]/10 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-[#8884d8] font-semibold">{index + 1}</span>
-                </div>
-                <p className="text-gray-700">{insight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Key Insights & Opportunity */}
-        <div className="bg-[#8884d8]/10 p-4 rounded-lg">
-          <h3 className="font-bold text-[#5552A6] mb-2">Wells Fargo Opportunity</h3>
-          <p className="text-sm text-gray-700">
-            Position Wells Fargo as a partner in balancing present enjoyment with future security through goal-based tools, automated investing options, and debt optimization strategies that respect Emerging Affluent customers' desire for financial freedom and security.
-          </p>
+          <p className="text-sm text-gray-600 mb-4">Understanding how emerging affluent professionals think about and manage their finances</p>
         </div>
       </div>
     );
   };
 
-  // Función para determinar qué pestaña mostrar basado en activeTab
   const renderTabContent = () => {
-    if (loading) {
-      return (
-        <div className="flex justify-center items-center h-64">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading data...</p>
-          </div>
-        </div>
-      );
-    }
-    
     switch (activeTab) {
       case 'overview':
         return renderOverviewTab();
@@ -2915,159 +1511,14 @@ const WellsFargoDashboard = () => {
         return renderSmallbusinessTab();
       case 'emergingaffluent':
         return renderEmergingaffluentTab();
-      case 'affluent':
-        return (
-          <div className="bg-white p-8 rounded-lg shadow-md text-center">
-            <h2 className="text-2xl font-bold text-gray-700 mb-4">Affluent Tab</h2>
-            <p className="text-gray-600 mb-6">This tab will be available in future updates.</p>
-          </div>
-        );
-      case 'aiAgent':
-        return (
-          <div className="bg-gradient-to-r from-purple-100 to-indigo-100 p-8 rounded-lg shadow-md text-center">
-            <h2 className="text-2xl font-bold text-purple-700 mb-4">AI Agent Coming Soon!</h2>
-            <div className="w-32 h-32 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-              </svg>
-            </div>
-            <p className="text-gray-700 mb-4">Our intelligent AI Agent will help you navigate financial data and provide personalized insights.</p>
-            <div className="bg-purple-200 text-purple-800 px-4 py-2 rounded-lg inline-block">
-              Available in Q3 2025
-            </div>
-          </div>
-        );
       default:
-        return renderOverviewTab();
+        return null;
     }
   };
 
-  // Función para generar el PDF
-  const generatePDF = () => {
-    alert('Descargando PDF...');
-    // Aquí iría la lógica para generar y descargar el PDF
-    console.log('PDF generation triggered');
-  };
-
-  // Función para generar el PPT
-  const generatePPT = () => {
-    alert('Descargando PPT...');
-    // Aquí iría la lógica para generar y descargar el PPT
-    console.log('PPT generation triggered');
-  };
-
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow-md p-4 fixed top-0 left-0 right-0 z-50">
-        <div className="container mx-auto flex items-center">
-          <img 
-            src="/Wells-Fargo-Embleme.svg" 
-            alt="Wells Fargo Logo" 
-            className="h-12 w-auto"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Wells_Fargo_Bank.svg';
-            }}
-          />
-          <div className="flex-1 flex justify-center">
-            <h1 className="text-2xl font-bold">
-              <span className="text-red-700">Money Mind</span>
-              <span className="text-gray-800"> Dashboard</span>
-            </h1>
-          </div>
-          <div className="flex gap-2">
-            <button
-              onClick={generatePDF}
-              className="flex items-center bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded transition duration-300"
-            >
-              <span className="mr-2">PDF</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <button
-              onClick={generatePPT}
-              className="flex items-center bg-[#00C49F] hover:bg-[#00A080] text-white font-bold py-2 px-4 rounded transition duration-300"
-            >
-              <span className="mr-2">PPT</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Tabs Navigation - Fixed below header */}
-      <div className="fixed top-20 left-0 right-0 bg-white shadow z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto">
-            <button
-              className={`px-4 py-3 text-sm font-medium ${activeTab === 'overview' ? 'text-red-600' : 'text-gray-500 hover:text-gray-700'}`}
-              onClick={() => setActiveTab('overview')}
-            >
-              Executive Summary
-            </button>
-            <button
-              className={`px-4 py-3 text-sm font-medium ${activeTab === 'millennials' ? 'text-red-600' : 'text-gray-500 hover:text-gray-700'}`}
-              onClick={() => setActiveTab('millennials')}
-            >
-              Millennials
-            </button>
-            <button
-              className={`px-4 py-3 text-sm font-medium ${activeTab === 'genZ' ? 'text-red-600' : 'text-gray-500 hover:text-gray-700'}`}
-              onClick={() => setActiveTab('genZ')}
-            >
-              Gen Z
-            </button>
-            <button
-              className={`px-4 py-3 text-sm font-medium ${activeTab === 'hispanics' ? 'text-red-600' : 'text-gray-500 hover:text-gray-700'}`}
-              onClick={() => setActiveTab('hispanics')}
-            >
-              Hispanic
-            </button>
-            <button
-              className={`px-4 py-3 text-sm font-medium ${activeTab === 'smallbusiness' ? 'text-red-600' : 'text-gray-500 hover:text-gray-700'}`}
-              onClick={() => setActiveTab('smallbusiness')}
-            >
-              Small Business
-            </button>
-            <button
-              className={`px-4 py-3 text-sm font-medium ${activeTab === 'emergingaffluent' ? 'text-red-600' : 'text-gray-500 hover:text-gray-700'}`}
-              onClick={() => setActiveTab('emergingaffluent')}
-            >
-              Emerging Affluent
-            </button>
-            <button
-              className={`px-4 py-3 text-sm font-medium text-gray-400 cursor-not-allowed`}
-              disabled={true}
-            >
-              Affluent*
-            </button>
-            <div className="ml-4 border-l border-gray-200"></div>
-            <button
-              className={`px-4 py-3 text-sm font-medium flex items-center gap-2 ${
-                activeTab === 'aiAgent' 
-                ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white' 
-                : 'text-purple-600 hover:text-purple-800'
-              } rounded-lg mx-2 transition-all duration-300`}
-              onClick={() => setActiveTab('aiAgent')}
-              disabled
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-              </svg>
-              AI Agent*
-              <span className="text-xs bg-purple-200 text-purple-800 px-2 py-0.5 rounded-full">Coming Soon</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content - Now with ref */}
-      <div ref={contentRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-36">
-        {renderTabContent()}
-      </div>
+    <div ref={contentRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-36">
+      {renderTabContent()}
     </div>
   );
 };
