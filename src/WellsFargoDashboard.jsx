@@ -2925,37 +2925,155 @@ const WellsFargoDashboard = () => {
 
   const renderSmallbusinessTab = () => {
     return (
-      <div>
-        {/* Small Business Money Mind Analysis */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-2">Small Business Money Mind Analysis</h2>
-          <p className="text-sm text-gray-600 mb-4">Understanding how small business owners think about and manage their finances</p>
-          
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex space-x-8">
-              <div>
-                <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">110</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg. Age</span>
-                <p className="text-2xl font-bold">36</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.smallbusiness.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.smallbusiness.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.smallbusiness.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
+      <div className="px-6 py-8 mx-auto max-w-7xl font-sans bg-gray-100 space-y-8">
+        {/* SINGLE WRAPPER DIV FOR TOP SECTIONS */}
+        <div className="bg-white p-6 rounded-lg shadow space-y-4">
+          {/* HEADER & SURVEY PARTICIPANT INFO */}
+          <div className="space-y-4">
+            {/* Title and Subtitle */}
+            <div>
+              <h1 className="text-xl font-bold text-gray-800 mb-1">
+                Small Business Money Mind Analysis
+              </h1>
+              <p className="text-sm text-gray-600">
+                Understanding how small business owners think about and manage their finances
+              </p>
+            </div>
+  
+            {/* Survey Participant Information */}
+            <div>
+              <h2 className="text-lg font-bold text-gray-800 mb-4">
+                Survey Participant Information
+              </h2>
+              <div className="flex flex-wrap justify-between">
+                {/* Overall Sentiment */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-2">
+                    <TrendingUp className="text-green-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Overall Sentiment
+                  </p>
+                  <p className="text-3xl font-bold text-green-500 my-2">
+                    +12.6%
+                  </p>
+                  <p className="text-xs text-gray-500">positive attitude</p>
+                </div>
+  
+                {/* Total Respondents */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mb-2">
+                    <Users className="text-orange-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Total Respondents
+                  </p>
+                  <p className="text-3xl font-bold text-orange-500 my-2">
+                    58
+                  </p>
+                  <p className="text-xs text-gray-500">survey participants</p>
+                </div>
+  
+                {/* Business Size */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mb-2">
+                    <Calendar className="text-orange-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Business Size
+                  </p>
+                  <p className="text-3xl font-bold text-orange-500 my-2">
+                    Small
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    various employee counts
+                  </p>
+                </div>
+  
+                {/* Average Owner Age */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mb-2">
+                    <Clock className="text-orange-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Avg Owner Age
+                  </p>
+                  <p className="text-3xl font-bold text-orange-500 my-2">
+                    42.7
+                  </p>
+                  <p className="text-xs text-gray-500">experienced operators</p>
+                </div>
               </div>
             </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
           </div>
-
-          <div className="bg-[#FF8042]/10 p-4 rounded-lg">
-            <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Managing cash flow and business growth</p>
+  
+          {/* GENDER & DEVICE USAGE + PRIMARY FINANCIAL CONCERN */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Gender Distribution */}
+              <div className="bg-orange-100 p-6 rounded-lg">
+                <h3 className="text-md font-semibold mb-4 text-gray-800">
+                  Gender Distribution
+                </h3>
+                <div className="flex justify-around">
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-orange-50 p-2 rounded-full">
+                      <User className="text-gray-700" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">34</p>
+                      <p className="text-sm text-gray-500">Male · 58.6%</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-pink-50 p-2 rounded-full">
+                      <UserPlus className="text-pink-600" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">24</p>
+                      <p className="text-sm text-gray-500">Female · 41.4%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              {/* Device Usage */}
+              <div className="bg-orange-100 p-6 rounded-lg">
+                <h3 className="text-md font-semibold mb-4 text-gray-800">
+                  Device Usage
+                </h3>
+                <div className="flex justify-around">
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-gray-200 p-2 rounded-full">
+                      <Smartphone className="text-gray-700" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">36</p>
+                      <p className="text-sm text-gray-500">iOS · 62.1%</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-green-50 p-2 rounded-full">
+                      <Tablet className="text-green-600" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">22</p>
+                      <p className="text-sm text-gray-500">Android · 37.9%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            {/* Primary Financial Concern */}
+            <div className="bg-orange-100 p-4 rounded-lg">
+              <h3 className="font-bold text-gray-800 mb-2 text-md">
+                Primary Financial Concern
+              </h3>
+              <p className="text-sm text-gray-700">
+                Cash flow management and sustainable growth
+              </p>
+            </div>
           </div>
         </div>
 
