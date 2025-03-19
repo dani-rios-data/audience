@@ -1,0 +1,4 @@
+                    dataKey="value"
+                    paddingAngle={2}
+                    labelLine={false}
+                    label={({ name, value, percent, cx, cy, midAngle, innerRadius, outerRadius }) => {
