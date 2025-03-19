@@ -1678,40 +1678,153 @@ const WellsFargoDashboard = () => {
 
   const renderGenZTab = () => {
     return (
-      <div>
-        {/* Header Section */}
-        <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-2">Gen Z Money Mind Analysis</h2>
-          <p className="text-sm text-gray-600 mb-4">Understanding how Gen Z thinks about and manages their finances</p>
-          
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex space-x-8">
-              <div>
-                <span className="text-sm text-gray-600">Respondents</span>
-                <p className="text-2xl font-bold">390</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg. Age</span>
-                <p className="text-2xl font-bold">21</p>
-              </div>
-              <div>
-                <span className="text-sm text-gray-600">Avg Sentiment</span>
-                <p className={`text-2xl font-bold ${calculateAvgSentiment(data.genZ.strategies) > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {calculateAvgSentiment(data.genZ.strategies) > 0 ? '+' : ''}
-                  {calculateAvgSentiment(data.genZ.strategies)}%
-                </p>
-                <span className="text-xs text-gray-500">Based on 3 key questions</span>
+      <div className="px-6 py-8 mx-auto max-w-7xl font-sans bg-gray-100 space-y-8">
+        {/* SINGLE WRAPPER DIV FOR TOP SECTIONS */}
+        <div className="bg-gray-200 p-6 rounded-lg shadow space-y-8">
+          {/* HEADER & SURVEY PARTICIPANT INFO */}
+          <div className="space-y-4">
+            {/* Title and Subtitle */}
+            <div>
+              <h1 className="text-xl font-bold text-gray-800 mb-1">
+                Gen Z Money Mind Analysis
+              </h1>
+              <p className="text-sm text-gray-600">
+                Understanding how Gen Z thinks about and manages their finances
+              </p>
+            </div>
+  
+            {/* Survey Participant Information */}
+            <div>
+              <h2 className="text-lg font-bold text-gray-800 mb-4">
+                Survey Participant Information
+              </h2>
+              <div className="flex flex-wrap justify-between">
+                {/* Overall Sentiment */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-2">
+                    <TrendingUp className="text-green-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Overall Sentiment
+                  </p>
+                  <p className="text-3xl font-bold text-green-500 my-2">+0.1%</p>
+                  <p className="text-xs text-gray-500">neutral attitude</p>
+                </div>
+  
+                {/* Total Respondents */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                    <Users className="text-blue-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Total Respondents
+                  </p>
+                  <p className="text-3xl font-bold text-blue-500 my-2">390</p>
+                  <p className="text-xs text-gray-500">survey participants</p>
+                </div>
+  
+                {/* Age Range */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                    <Calendar className="text-blue-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Age Range
+                  </p>
+                  <p className="text-3xl font-bold text-blue-500 my-2">18-27</p>
+                  <p className="text-xs text-gray-500">gen z range</p>
+                </div>
+  
+                {/* Average Age */}
+                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                    <Clock className="text-blue-500" size={16} />
+                  </div>
+                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
+                    Average Age
+                  </p>
+                  <p className="text-3xl font-bold text-blue-500 my-2">23.6</p>
+                  <p className="text-xs text-gray-500">early twenties</p>
+                </div>
               </div>
             </div>
-            {/* Elimino la sección de Avg Sentiment adicional */}
           </div>
-
-          <div className="bg-[#00C49F]/10 p-4 rounded-lg">
-            <h3 className="font-bold mb-2">Primary Financial Concern</h3>
-            <p>Building credit history and saving</p>
+  
+          {/* GENDER & DEVICE USAGE + PRIMARY FINANCIAL CONCERN */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Gender Distribution */}
+              <div className="bg-blue-100 p-6 rounded-lg">
+                <h3 className="text-md font-semibold mb-4 text-gray-800">
+                  Gender Distribution
+                </h3>
+                <div className="flex justify-around">
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-pink-50 p-2 rounded-full">
+                      <UserPlus className="text-pink-600" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">202</p>
+                      <p className="text-sm text-gray-500">
+                        Female · 51.8%
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-blue-50 p-2 rounded-full">
+                      <User className="text-blue-600" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">188</p>
+                      <p className="text-sm text-gray-500">
+                        Male · 48.2%
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              {/* Device Usage */}
+              <div className="bg-blue-100 p-6 rounded-lg">
+                <h3 className="text-md font-semibold mb-4 text-gray-800">
+                  Device Usage
+                </h3>
+                <div className="flex justify-around">
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-gray-200 p-2 rounded-full">
+                      <Smartphone className="text-gray-700" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">248</p>
+                      <p className="text-sm text-gray-500">iOS · 63.6%</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="mr-3 bg-green-50 p-2 rounded-full">
+                      <Tablet className="text-green-600" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold">142</p>
+                      <p className="text-sm text-gray-500">Android · 36.4%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            {/* Primary Financial Concern */}
+            <div className="bg-blue-100 p-4 rounded-lg">
+              <h3 className="font-bold text-gray-800 mb-2 text-md">
+                Primary Financial Concern
+              </h3>
+              <p className="text-sm text-gray-700">
+                Building financial independence while managing digital spending
+              </p>
+            </div>
           </div>
         </div>
-
+  
+  
         {/* Money Mind Factors */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
           <h2 className="text-xl font-bold mb-4">Money Mind Factors</h2>
@@ -1875,6 +1988,91 @@ const WellsFargoDashboard = () => {
             </div>
           </div>
         </div>
+
+              {/* AUTHENTIC SURVEY RESPONSES */}
+      <div className="bg-white p-6 rounded-lg shadow space-y-4">
+        <h2 className="text-lg font-bold text-gray-800 flex items-center">
+          <div className="w-6 h-6 rounded-md bg-[#7FFFD4]/40 flex items-center justify-center mr-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-[#7FFFD4]"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          Authentic Survey Responses
+        </h2>
+
+        <div className="flex flex-wrap gap-8">
+          {/* Q1 */}
+          <div className="flex-1 min-w-[280px]">
+            <div className="inline-block mb-3 px-2 py-1 text-xs bg-green-50 rounded text-gray-700">
+              <span className="font-medium">Sentiment: </span>
+              <span className="font-bold text-green-600">+30%</span>
+            </div>
+            <div className="mb-4 pb-2 border-b border-gray-300">
+              <h3 className="font-semibold text-gray-800 text-sm">
+                What does money mean to you?
+              </h3>
+            </div>
+            <ul className="space-y-3 text-gray-700 text-sm">
+              <li>"Freedom"</li>
+              <li>"Everything"</li>
+              <li>"Security"</li>
+              <li>"Independence"</li>
+              <li>"Opportunity to live how I want"</li>
+            </ul>
+          </div>
+
+          {/* Q2 */}
+          <div className="flex-1 min-w-[280px]">
+            <div className="inline-block mb-3 px-2 py-1 text-xs bg-green-50 rounded text-gray-700">
+              <span className="font-medium">Sentiment: </span>
+              <span className="font-bold text-green-600">+20%</span>
+            </div>
+            <div className="mb-4 pb-2 border-b border-gray-300">
+              <h3 className="font-semibold text-gray-800 text-sm">
+                What makes managing your money easier?
+              </h3>
+            </div>
+            <ul className="space-y-3 text-gray-700 text-sm">
+              <li>"Having a plan for each time I get paid"</li>
+              <li>"Apps"</li>
+              <li>"Spreadsheets and budgets"</li>
+              <li>"Using fintech apps"</li>
+              <li>"Having separate accounts for different purposes"</li>
+            </ul>
+          </div>
+
+          {/* Q3 */}
+          <div className="flex-1 min-w-[280px]">
+            <div className="inline-block mb-3 px-2 py-1 text-xs bg-red-50 rounded text-gray-700">
+              <span className="font-medium">Sentiment: </span>
+              <span className="font-bold text-gray-600">0%</span>
+            </div>
+            <div className="mb-4 pb-2 border-b border-gray-300">
+              <h3 className="font-semibold text-gray-800 text-sm">
+                What tricks help you make your money last?
+              </h3>
+            </div>
+            <ul className="space-y-3 text-gray-700 text-sm">
+              <li>"Don't spend impulsively"</li>
+              <li>"Staying home"</li>
+              <li>"Haven't developed any long standing ones yet"</li>
+              <li>"Only buying what I need"</li>
+              <li>"Deleting shopping apps from my phone"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
         {/* How Gen Z Manages Their Money */}
         <div className="bg-[#e8f5e9] p-6 rounded-lg shadow mb-8">
