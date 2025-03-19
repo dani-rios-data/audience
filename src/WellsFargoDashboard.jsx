@@ -2693,7 +2693,7 @@ const WellsFargoDashboard = () => {
                     Age Range
                   </p>
                   <p className="text-3xl font-bold text-yellow-500 my-2">
-                    Various
+                    16 - 74
                   </p>
                   <p className="text-xs text-gray-500">
                     across Hispanic adults
@@ -3309,22 +3309,6 @@ const WellsFargoDashboard = () => {
                   <p className="text-xs text-gray-500">survey participants</p>
                 </div>
   
-                {/* Business Size */}
-                <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
-                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mb-2">
-                    <Calendar className="text-orange-500" size={16} />
-                  </div>
-                  <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
-                    Business Size
-                  </p>
-                  <p className="text-3xl font-bold text-orange-500 my-2">
-                    Small
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    various employee counts
-                  </p>
-                </div>
-  
                 {/* Average Owner Age */}
                 <div className="flex flex-col items-center text-center p-4 mx-2 min-w-[150px]">
                   <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mb-2">
@@ -3740,7 +3724,7 @@ const WellsFargoDashboard = () => {
                     Age Range
                   </p>
                   <p className="text-3xl font-bold text-purple-500 my-2">
-                    Various
+                    25 - 45
                   </p>
                   <p className="text-xs text-gray-500">emerging affluent demographic</p>
                 </div>
