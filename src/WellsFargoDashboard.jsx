@@ -343,91 +343,153 @@ const WellsFargoDashboard = () => {
 
   const renderOverviewTab = () => {
     return (
-      <div>
-        {/* Overview Section */}
+      <div className="px-6 py-8 mx-auto max-w-7xl font-sans bg-gray-100 space-y-8">
+        {/* OVERVIEW & STATS */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4 text-gray-700">Honing Money Mind with Wells Fargo</h2>
-          <p className="mb-4">Analysis of financial improvisers across audience segments who create unique mental strategies - the "money mind" - to navigate their finances.</p>
-          
+          <h2 className="text-xl font-bold mb-4 text-gray-700">
+            Honing Money Mind with Wells Fargo
+          </h2>
+          <p className="mb-4">
+            Analysis of financial improvisers across audience segments who create
+            unique mental strategies - the &quot;money mind&quot; - to navigate
+            their finances.
+          </p>
+  
+          {/* Three key metrics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            {/* Total Respondents */}
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
               <h3 className="font-semibold text-lg mb-2">Total Respondents</h3>
-              <p className="text-3xl font-bold text-gray-800">1,145</p>
+              <p className="text-3xl font-bold text-gray-800">1,527</p>
               <p className="text-sm text-gray-500">Across 5 audience segments</p>
             </div>
+  
+            {/* Average Sentiment */}
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
               <h3 className="font-semibold text-lg mb-2">Average Sentiment</h3>
-              <p className="text-3xl font-bold text-green-500">+14.2%</p>
-              <p className="text-sm text-gray-500">Cautiously optimistic outlook</p>
+              <p className="text-3xl font-bold text-green-500">+9.3%</p>
+              <p className="text-sm text-gray-500">
+                Cautiously optimistic outlook
+              </p>
             </div>
+  
+            {/* Top Barrier */}
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
               <h3 className="font-semibold text-lg mb-2">Top Barrier</h3>
-              <p className="text-3xl font-bold text-gray-800">Invisible Spending</p>
-              <p className="text-sm text-gray-500">63% report difficulty tracking recurring expenses</p>
+              <p className="text-3xl font-bold text-gray-800">
+                Invisible Spending
+              </p>
+              <p className="text-sm text-gray-500">
+                63% report difficulty tracking recurring expenses
+              </p>
             </div>
           </div>
-
-          {/* Strategic Focus Section */}
+  
+          {/* STRATEGIC FOCUS SECTION */}
           <div className="border-t border-gray-200 pt-6 mt-6">
-            <h3 className="font-semibold text-lg mb-4">Strategic Focus: Honing Money Mind with Wells Fargo</h3>
-            <p className="mb-4">A partnership that helps customers gain certainty while sharpening their financial decision-making skills.</p>
+            <h3 className="font-semibold text-lg mb-4">
+              Strategic Focus: Honing Money Mind with Wells Fargo
+            </h3>
+            <p className="mb-4">
+              A partnership that helps customers gain certainty while sharpening
+              their financial decision-making skills.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+              {/* The Problem */}
               <div className="p-4 bg-red-50 rounded-lg border border-red-100">
                 <h4 className="font-semibold mb-2 text-red-800">The Problem</h4>
-                <p className="text-sm">Wells Fargo needs to rebuild trust and demonstrate its ability to deliver on basic fundamentals while solving unmet category needs. 58% of customers express need for more transparency in banking.</p>
+                <p className="text-sm">
+                  Wells Fargo needs to rebuild trust and demonstrate its ability
+                  to deliver on basic fundamentals while solving unmet category
+                  needs. 58% of customers express need for more transparency in
+                  banking.
+                </p>
               </div>
+              {/* The Insight */}
               <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-100">
                 <h4 className="font-semibold mb-2 text-yellow-800">The Insight</h4>
-                <p className="text-sm">Financial improvisation means individuals create unique mental strategies - their "money mind". As humans, they seek certainty and expertise to sharpen these skills. 71% of Hispanic customers emphasize family financial security.</p>
+                <p className="text-sm">
+                  Financial improvisation means individuals create unique mental
+                  strategies - their &quot;money mind&quot;. As humans, they seek
+                  certainty and expertise to sharpen these skills. 71% of Hispanic
+                  customers emphasize family financial security.
+                </p>
               </div>
+              {/* Strategy */}
               <div className="p-4 bg-green-50 rounded-lg border border-green-100">
                 <h4 className="font-semibold mb-2 text-green-800">Strategy</h4>
-                <p className="text-sm">Wells Fargo positioned as a partnership powered by empathy, simplicity and expertise to help customers navigate myriad money journeys. 67% of small business owners prioritize financial stability and growth.</p>
+                <p className="text-sm">
+                  Wells Fargo positioned as a partnership powered by empathy,
+                  simplicity and expertise to help customers navigate myriad money
+                  journeys. 67% of small business owners prioritize financial
+                  stability and growth.
+                </p>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Money Mind Comparison Section */}
+  
+        {/* MONEY MIND COMPARISON */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-2 text-gray-700">Money Mind Comparison Across Segments</h2>
-          
-          {/* Understanding this Chart Section */}
+          <h2 className="text-xl font-bold mb-2 text-gray-700">
+            Money Mind Comparison Across Segments
+          </h2>
+  
+          {/* Understanding Chart */}
           <div className="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding this Chart</h3>
-            <p className="text-sm text-gray-600 mb-4">This chart shows how each audience segment values different aspects of their "Money Mind" on a scale of 0-100%, where higher numbers indicate stronger importance.</p>
+            <h3 className="font-bold text-lg mb-2 text-gray-900">
+              Understanding this Chart
+            </h3>
+            <p className="text-sm text-gray-600 mb-4">
+              This chart shows how each audience segment values different aspects
+              of their &quot;Money Mind&quot; on a scale of 0-100%, where higher
+              numbers indicate stronger importance.
+            </p>
             <div className="space-y-3">
               <div className="flex items-center">
-                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">✓</div>
+                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">
+                  ✓
+                </div>
                 <span className="text-sm text-gray-900">
-                  <span className="font-semibold">Security Focused:</span> Prioritizes financial stability and safety
+                  <span className="font-semibold">Security Focused:</span>{' '}
+                  Prioritizes financial stability and safety
                 </span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">✓</div>
+                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">
+                  ✓
+                </div>
                 <span className="text-sm text-gray-900">
-                  <span className="font-semibold">Growth Oriented:</span> Focuses on increasing wealth
+                  <span className="font-semibold">Growth Oriented:</span> Focuses
+                  on increasing wealth
                 </span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">✓</div>
+                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">
+                  ✓
+                </div>
                 <span className="text-sm text-gray-900">
-                  <span className="font-semibold">Control Seekers:</span> Wants hands-on management
+                  <span className="font-semibold">Control Seekers:</span> Wants
+                  hands-on management
                 </span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">✓</div>
+                <div className="w-3 h-3 flex items-center justify-center text-yellow-500 mr-2">
+                  ✓
+                </div>
                 <span className="text-sm text-gray-900">
-                  <span className="font-semibold">Day-to-Day Focused:</span> Concerned with immediate finances
+                  <span className="font-semibold">Day-to-Day Focused:</span>{' '}
+                  Concerned with immediate finances
                 </span>
               </div>
             </div>
           </div>
-
+  
+          {/* EXAMPLE CHART: adapt or replace with new data */}
           <div className="h-[400px]">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
-                data={data.overview.moneyMind}
+                data={data.overview.moneyMind} // Replace with new data if needed
                 margin={{ top: 20, right: 30, left: 40, bottom: 20 }}
                 layout="horizontal"
                 barGap={8}
@@ -444,13 +506,18 @@ const WellsFargoDashboard = () => {
                 />
                 <YAxis
                   type="number"
-                  domain={calculateDomain(data.overview.moneyMind, item => 
-                    Math.max(item.millennials, item.genZ, item.hispanic, item.smallBusiness))}
+                  domain={calculateDomain(data.overview.moneyMind, (item) =>
+                    Math.max(
+                      item.millennials,
+                      item.genZ,
+                      item.hispanic,
+                      item.smallBusiness
+                    )
+                  )}
                   tickFormatter={(value) => `${value}%`}
                   tick={{ fontSize: 12, fill: '#666' }}
                   axisLine={{ stroke: '#e5e7eb' }}
                   tickLine={false}
-                  grid={{ stroke: '#e5e7eb', strokeDasharray: '5 5' }}
                 />
                 <Tooltip
                   formatter={(value, name) => [`${value}%`, name]}
@@ -463,91 +530,196 @@ const WellsFargoDashboard = () => {
                   }}
                   cursor={{ fill: 'rgba(229, 231, 235, 0.3)' }}
                 />
-                <Bar dataKey="millennials" name="Millennials" fill={COLORS.blue} radius={[6, 6, 6, 6]}>
+                <Bar
+                  dataKey="millennials"
+                  name="Millennials"
+                  fill={COLORS.blue}
+                  radius={[6, 6, 6, 6]}
+                >
                   {data.overview.moneyMind.map((entry, index) => (
                     <Cell key={`millennials-${index}`} fill={`${COLORS.blue}dd`} />
                   ))}
                 </Bar>
-                <Bar dataKey="genZ" name="Gen Z" fill={COLORS.green} radius={[6, 6, 6, 6]}>
+                <Bar
+                  dataKey="genZ"
+                  name="Gen Z"
+                  fill={COLORS.green}
+                  radius={[6, 6, 6, 6]}
+                >
                   {data.overview.moneyMind.map((entry, index) => (
                     <Cell key={`genZ-${index}`} fill={`${COLORS.green}dd`} />
                   ))}
                 </Bar>
-                <Bar dataKey="hispanic" name="Hispanic" fill={COLORS.yellow} radius={[6, 6, 6, 6]}>
+                <Bar
+                  dataKey="hispanic"
+                  name="Hispanic"
+                  fill={COLORS.yellow}
+                  radius={[6, 6, 6, 6]}
+                >
                   {data.overview.moneyMind.map((entry, index) => (
                     <Cell key={`hispanic-${index}`} fill={`${COLORS.yellow}dd`} />
                   ))}
                 </Bar>
-                <Bar dataKey="smallBusiness" name="Small Business" fill={COLORS.orange} radius={[6, 6, 6, 6]}>
+                <Bar
+                  dataKey="smallBusiness"
+                  name="Small Business"
+                  fill={COLORS.orange}
+                  radius={[6, 6, 6, 6]}
+                >
                   {data.overview.moneyMind.map((entry, index) => (
-                    <Cell key={`smallBusiness-${index}`} fill={`${COLORS.orange}dd`} />
+                    <Cell
+                      key={`smallBusiness-${index}`}
+                      fill={`${COLORS.orange}dd`}
+                    />
                   ))}
                 </Bar>
-                <Bar dataKey="emergingAffluent" name="Emerging Affluent" fill={COLORS.purple} radius={[6, 6, 6, 6]}>
+                <Bar
+                  dataKey="emergingAffluent"
+                  name="Emerging Affluent"
+                  fill={COLORS.purple}
+                  radius={[6, 6, 6, 6]}
+                >
                   {data.overview.moneyMind.map((entry, index) => (
-                    <Cell key={`emergingAffluent-${index}`} fill={`${COLORS.purple}dd`} />
+                    <Cell
+                      key={`emergingAffluent-${index}`}
+                      fill={`${COLORS.purple}dd`}
+                    />
                   ))}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
-          
-          {/* Key Takeaways Section */}
+  
+          {/* KEY FINDINGS & STRATEGIC IMPLICATIONS */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Key Findings */}
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-              <h3 className="font-semibold text-lg mb-2 text-red-700">Key Findings</h3>
+              <h3 className="font-semibold text-lg mb-2 text-red-700">
+                Key Findings
+              </h3>
               <ul className="list-disc pl-4 space-y-2 text-gray-700">
-                <li>Small Business owners show the highest focus on control (32%) and security (26%). 43% consider money as a means of business stability.</li>
-                <li>Gen Z shows growth orientation (33%) and significant day-to-day focus (30%). 65% use digital tools for money management.</li>
-                <li>Hispanic segment prioritizes security (45%) and growth (35%). 37% mention financial freedom as their primary money motivation.</li>
-                <li>Millennials emphasize growth (45%) with balanced overall distribution. 52% value digital banking solutions with human support options.</li>
-                <li>Emerging Affluent strongly prioritize growth (40%) with minimal day-to-day focus (10%). 78% invest regularly as part of their financial strategy.</li>
+                <li>
+                  Small Business owners show the highest focus on control (76%)
+                  and stability (65%). 43% consider money as a means of business
+                  sustainability.
+                </li>
+                <li>
+                  Gen Z shows growth orientation (52%) and significant day-to-day
+                  focus (45%). 65% use digital tools for money management.
+                </li>
+                <li>
+                  Hispanic segment prioritizes security (48%) and growth (42%). 37%
+                  mention financial freedom as their primary money motivation.
+                </li>
+                <li>
+                  Millennials emphasize growth (45%) with balanced overall
+                  distribution. 52% value digital banking solutions with human
+                  support options.
+                </li>
+                <li>
+                  Emerging Affluent strongly prioritize growth (72%) with minimal
+                  day-to-day focus (10%). 78% invest regularly as part of their
+                  financial strategy.
+                </li>
               </ul>
             </div>
+  
+            {/* Strategic Implications */}
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-              <h3 className="font-semibold text-lg mb-2 text-red-700">Strategic Implications</h3>
+              <h3 className="font-semibold text-lg mb-2 text-red-700">
+                Strategic Implications
+              </h3>
               <ul className="list-disc pl-4 space-y-2 text-gray-700">
-                <li>Wells Fargo should customize control tools for small business segment, as 39% cite better cash flow management as their primary need.</li>
-                <li>The bank needs to develop growth-focused products for Gen Z, with 54% expressing interest in automated investing platforms.</li>
-                <li>Security features should be enhanced for Hispanic customers, where 42% rank security as their top banking priority.</li>
-                <li>Flexible solutions are required for millennials' diverse needs, with 61% seeking personalized financial guidance.</li>
-                <li>Wealth-building products with premium features would benefit Emerging Affluent customers, 73% of whom are actively planning for early retirement.</li>
+                <li>
+                  Wells Fargo should customize control tools for small business
+                  segment, as 39% cite better cash flow management as their primary
+                  need.
+                </li>
+                <li>
+                  The bank needs to develop growth-focused products for Gen Z,
+                  with 54% expressing interest in automated investing platforms.
+                </li>
+                <li>
+                  Security features should be enhanced for Hispanic customers,
+                  where 42% rank security as their top banking priority.
+                </li>
+                <li>
+                  Flexible solutions are required for millennials&apos; diverse
+                  needs, with 61% seeking personalized financial guidance.
+                </li>
+                <li>
+                  Wealth-building products with premium features would benefit
+                  Emerging Affluent customers, 73% of whom are actively planning
+                  for early retirement.
+                </li>
               </ul>
             </div>
           </div>
         </div>
-
-        {/* Top Money Management Strategies */}
+  
+        {/* TOP MONEY MANAGEMENT STRATEGIES */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4 text-gray-700">Top Money Management Strategies</h2>
-          <p className="text-sm text-gray-600 mb-4">Analysis of the most common financial management techniques used across all segments, with 82% employing at least two strategies simultaneously</p>
-
+          <h2 className="text-xl font-bold mb-4 text-gray-700">
+            Top Money Management Strategies
+          </h2>
+          <p className="text-sm text-gray-600 mb-4">
+            Analysis of the most common financial management techniques used
+            across all segments, with 82% employing at least two strategies
+            simultaneously
+          </p>
+  
           {/* Understanding these strategies */}
           <div className="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-2 text-gray-900">Understanding these strategies:</h3>
+            <h3 className="font-bold text-lg mb-2 text-gray-900">
+              Understanding these strategies:
+            </h3>
             <div className="space-y-4">
               {data.overview.strategies.map((strategy, index) => (
                 <div key={index} className="flex items-start">
-                  <div className="w-3 h-3 flex items-center justify-center text-[#20B2AA] mt-1 mr-2">✓</div>
+                  <div className="w-3 h-3 flex items-center justify-center text-[#20B2AA] mt-1 mr-2">
+                    ✓
+                  </div>
                   <div className="text-sm text-gray-900">
-                    <span className="font-semibold">{strategy.name} ({strategy.value}%):</span> {strategy.description}
+                    <span className="font-semibold">
+                      {strategy.name} ({strategy.value}%):
+                    </span>{' '}
+                    {strategy.description}
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
+  
+          {/* Data Highlights */}
           <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
-            <h3 className="font-semibold text-lg mb-2 text-gray-900">Data Highlights:</h3>
+            <h3 className="font-semibold text-lg mb-2 text-gray-900">
+              Data Highlights:
+            </h3>
             <ul className="list-disc pl-4 space-y-2 text-gray-700">
-              <li>47% of Hispanic respondents emphasize family-focused financial planning</li>
-              <li>59% of small business owners prioritize separating personal and business finances</li>
-              <li>38% of Gen Z report using automated savings apps to manage their money</li>
-              <li>43% across all segments cite budgeting as their most effective money management tool</li>
-              <li>31% of respondents report difficulty maintaining their financial strategies during economic uncertainty</li>
+              <li>
+                47% of Hispanic respondents emphasize family-focused financial
+                planning
+              </li>
+              <li>
+                59% of small business owners prioritize separating personal and
+                business finances
+              </li>
+              <li>
+                38% of Gen Z report using automated savings apps to manage their
+                money
+              </li>
+              <li>
+                43% across all segments cite budgeting as their most effective
+                money management tool
+              </li>
+              <li>
+                31% of respondents report difficulty maintaining their financial
+                strategies during economic uncertainty
+              </li>
             </ul>
           </div>
-          
+  
+          {/* Bar Chart for strategies */}
           <div className="flex gap-6">
             <div className="flex-1">
               <div className="h-[400px]">
@@ -591,24 +763,38 @@ const WellsFargoDashboard = () => {
                       }}
                     >
                       {data.overview.strategies.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`#20B2AA${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={`#20B2AA${Math.round(
+                            ((100 - index * 15) / 100) * 255
+                          )
+                            .toString(16)
+                            .padStart(2, '0')}`}
+                        />
                       ))}
                     </Bar>
                   </BarChart>
                 </ResponsiveContainer>
               </div>
             </div>
-
-            {/* Implications Section */}
+  
+            {/* Implications for Wells Fargo */}
             <div className="w-80 bg-gray-50 p-6 rounded-lg border border-gray-200 self-center">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Implications for Wells Fargo</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">
+                Implications for Wells Fargo
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
                     <div className="w-2 h-2 bg-[#20B2AA] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">High adoption strategies:</span> Wells Fargo needs to offer budget management and expense tracking tools as core offerings, with advanced features that differentiate them from competitors
+                    <span className="font-semibold">
+                      High adoption strategies:
+                    </span>{' '}
+                    Wells Fargo needs to offer budget management and expense
+                    tracking tools as core offerings, with advanced features that
+                    differentiate them from competitors
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -616,7 +802,10 @@ const WellsFargoDashboard = () => {
                     <div className="w-2 h-2 bg-[#20B2AA] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Growth opportunity:</span> Subscription management represents an emerging concern (34%) and an unmet need that Wells Fargo can address with new dedicated tools
+                    <span className="font-semibold">Growth opportunity:</span>{' '}
+                    Subscription management represents an emerging concern (34%)
+                    and an unmet need that Wells Fargo can address with new
+                    dedicated tools
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -624,18 +813,24 @@ const WellsFargoDashboard = () => {
                     <div className="w-2 h-2 bg-[#20B2AA] rounded-full"></div>
                   </div>
                   <p className="ml-3 text-sm text-gray-900">
-                    <span className="font-semibold">Education need:</span> The bank has an opportunity to educate customers about automated savings approaches, which are currently underutilized despite their proven effectiveness
+                    <span className="font-semibold">Education need:</span> The
+                    bank has an opportunity to educate customers about automated
+                    savings approaches, which are currently underutilized despite
+                    their proven effectiveness
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Tools and Pain Points */}
+  
+        {/* TOOLS & PAIN POINTS */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          {/* Desired Banking Tools */}
           <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-6 text-gray-700">Desired Banking Tools</h2>
+            <h2 className="text-xl font-bold mb-6 text-gray-700">
+              Desired Banking Tools
+            </h2>
             <div className="h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
@@ -645,7 +840,10 @@ const WellsFargoDashboard = () => {
                 >
                   <XAxis
                     type="number"
-                    domain={calculateDomain([...data.overview.tools].sort((a, b) => b.value - a.value), "value")}
+                    domain={calculateDomain(
+                      [...data.overview.tools].sort((a, b) => b.value - a.value),
+                      'value'
+                    )}
                     tickFormatter={(value) => `${value}%`}
                     tick={{ fontSize: 12 }}
                   />
@@ -677,17 +875,28 @@ const WellsFargoDashboard = () => {
                       fontWeight: 'bold'
                     }}
                   >
-                    {[...data.overview.tools].sort((a, b) => b.value - a.value).map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={`${COLORS.secondary}${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
-                    ))}
+                    {[...data.overview.tools]
+                      .sort((a, b) => b.value - a.value)
+                      .map((entry, index) => (
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={`${COLORS.secondary}${Math.round(
+                            ((100 - index * 15) / 100) * 255
+                          )
+                            .toString(16)
+                            .padStart(2, '0')}`}
+                        />
+                      ))}
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
             </div>
-
-            {/* Key Insights Section for Desired Banking Tools */}
+  
+            {/* Key Insights for Desired Banking Tools */}
             <div className="mt-6 bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Key Insights</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">
+                Key Insights
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
@@ -695,36 +904,52 @@ const WellsFargoDashboard = () => {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-gray-900">
-                      <span className="font-semibold">Mobile Banking:</span> High demand across all segments (82%), particularly Gen Z (94%) and Millennials (89%) who prefer digital-first solutions
+                      <span className="font-semibold">Mobile Banking:</span> High
+                      demand across all segments (82%), particularly Gen Z (94%)
+                      and Millennials (89%) who prefer digital-first solutions
                     </p>
                   </div>
                 </div>
+  
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
                     <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-gray-900">
-                      <span className="font-semibold">Goal Tracking:</span> Most valued by Millennials (76%) for balancing current lifestyle with future planning. 68% of Hispanic respondents seek family-oriented savings goals.
+                      <span className="font-semibold">Goal Tracking:</span> Most
+                      valued by Millennials (76%) for balancing current lifestyle
+                      with future planning. 68% of Hispanic respondents seek
+                      family-oriented savings goals.
                     </p>
                   </div>
                 </div>
+  
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
                     <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-gray-900">
-                      <span className="font-semibold">Subscription Management:</span> Growing need (63%) as customers struggle with "invisible spending" from digital subscriptions. 71% of Small Business owners want integrated business/personal expense tracking.
+                      <span className="font-semibold">
+                        Subscription Management:
+                      </span>{' '}
+                      Growing need (63%) as customers struggle with &quot;invisible
+                      spending&quot; from digital subscriptions. 71% of Small
+                      Business owners want integrated business/personal expense
+                      tracking.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
+  
+          {/* Key Pain Points */}
           <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-6 text-gray-700">Key Pain Points</h2>
+            <h2 className="text-xl font-bold mb-6 text-gray-700">
+              Key Pain Points
+            </h2>
             <div className="h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
@@ -734,7 +959,10 @@ const WellsFargoDashboard = () => {
                 >
                   <XAxis
                     type="number"
-                    domain={calculateDomain([...data.overview.tools].sort((a, b) => b.value - a.value), "value")}
+                    domain={calculateDomain(
+                      [...data.overview.tools].sort((a, b) => b.value - a.value),
+                      'value'
+                    )}
                     tickFormatter={(value) => `${value}%`}
                     tick={{ fontSize: 12 }}
                   />
@@ -766,17 +994,28 @@ const WellsFargoDashboard = () => {
                       fontWeight: 'bold'
                     }}
                   >
-                    {[...data.overview.painPoints].sort((a, b) => b.value - a.value).map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={`#D71E28${Math.round((100 - (index * 15)) / 100 * 255).toString(16).padStart(2, '0')}`} />
-                    ))}
+                    {[...data.overview.painPoints]
+                      .sort((a, b) => b.value - a.value)
+                      .map((entry, index) => (
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={`#D71E28${Math.round(
+                            ((100 - index * 15) / 100) * 255
+                          )
+                            .toString(16)
+                            .padStart(2, '0')}`}
+                        />
+                      ))}
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
             </div>
-
-            {/* Opportunity Areas Section for Key Pain Points */}
+  
+            {/* Opportunity Areas */}
             <div className="mt-6 bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Opportunity Areas</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">
+                Opportunity Areas
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
@@ -784,27 +1023,39 @@ const WellsFargoDashboard = () => {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-gray-900">
-                      <span className="font-semibold">Invisible Spending:</span> 63% of customers need automated tools to identify pattern-based spending they often miss. 39% of Hispanic respondents specifically mention difficulty tracking digital expenses.
+                      <span className="font-semibold">Invisible Spending:</span>{' '}
+                      63% of customers need automated tools to identify
+                      pattern-based spending they often miss. 39% of Hispanic
+                      respondents specifically mention difficulty tracking digital
+                      expenses.
                     </p>
                   </div>
                 </div>
+  
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
                     <div className="w-2 h-2 bg-red-700 rounded-full"></div>
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-gray-900">
-                      <span className="font-semibold">Investing Complexity:</span> 57% report investing intimidation. 44% of Small Business owners cite lack of investment knowledge as a major barrier to business growth.
+                      <span className="font-semibold">Investing Complexity:</span>{' '}
+                      57% report investing intimidation. 44% of Small Business
+                      owners cite lack of investment knowledge as a major barrier
+                      to business growth.
                     </p>
                   </div>
                 </div>
+  
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 mt-1">
                     <div className="w-2 h-2 bg-red-700 rounded-full"></div>
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-gray-900">
-                      <span className="font-semibold">Financial Guidance:</span> 72% want balance between digital guidance and human expertise across segments. 68% of Gen Z prefer digital-first but with human backup for complex decisions.
+                      <span className="font-semibold">Financial Guidance:</span>{' '}
+                      72% want balance between digital guidance and human expertise
+                      across segments. 68% of Gen Z prefer digital-first but with
+                      human backup for complex decisions.
                     </p>
                   </div>
                 </div>
@@ -812,78 +1063,162 @@ const WellsFargoDashboard = () => {
             </div>
           </div>
         </div>
-
-        {/* Proof Point Framework */}
+  
+        {/* PROOF POINT FRAMEWORK */}
         <div className="bg-white p-6 rounded-lg shadow mb-8">
-          <h2 className="text-xl font-bold mb-4 text-gray-700">Wells Fargo Proof Point Framework</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-700">
+            Wells Fargo Proof Point Framework
+          </h2>
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Barrier</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Proof Point</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role for Wells Fargo</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Barrier
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Proof Point
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Role for Wells Fargo
+                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">"Invisible" spending</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Manage subscriptions through the WF app</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Effortless transparency</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    &quot;Invisible&quot; spending
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Manage subscriptions through the WF app
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Effortless transparency
+                  </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Perceived barrier to investment</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Stock fractions with as little as $10</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Helping you buy-in your way</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Perceived barrier to investment
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Stock fractions with as little as $10
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Helping you buy-in your way
+                  </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Getting sidetracked from goals</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Planning/goal setting in the WF app</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Persistence in your pursuit</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Getting sidetracked from goals
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Planning/goal setting in the WF app
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Persistence in your pursuit
+                  </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Looming vulnerability</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Card on/off feature</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Omni-present protection</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Looming vulnerability
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Card on/off feature
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Omni-present protection
+                  </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Personal money blind spots</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Human Bankers</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Empathetic expertise</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Personal money blind spots
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Human Bankers
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Empathetic expertise
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-
-        {/* Recommended Focus Areas */}
+  
+        {/* RECOMMENDED FOCUS AREAS */}
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-xl font-bold mb-4 text-gray-700">Recommended Focus Areas</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-700">
+            Recommended Focus Areas
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Immediate Opportunities */}
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2 text-red-800">Immediate Opportunities</h3>
+              <h3 className="font-semibold text-lg mb-2 text-red-800">
+                Immediate Opportunities
+              </h3>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Subscription management tools to address "invisible spending" - 63% of respondents report this need</li>
-                <li>Micro-investing options with educational component - 57% express interest in starting with small amounts</li>
-                <li>Enhanced goal tracking with visual progress indicators - 76% find visual feedback motivating</li>
+                <li>
+                  Subscription management tools to address &quot;invisible
+                  spending&quot; - 63% of respondents report this need
+                </li>
+                <li>
+                  Micro-investing options with educational component - 57% express
+                  interest in starting with small amounts
+                </li>
+                <li>
+                  Enhanced goal tracking with visual progress indicators - 76% find
+                  visual feedback motivating
+                </li>
               </ul>
             </div>
+  
+            {/* Strategic Positioning */}
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2 text-yellow-800">Strategic Positioning</h3>
+              <h3 className="font-semibold text-lg mb-2 text-yellow-800">
+                Strategic Positioning
+              </h3>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Position as a partner in financial improvisation - 82% value banking relationships that adapt to their changing needs</li>
-                <li>Emphasize the combination of digital tools with human expertise - 72% prefer this hybrid approach</li>
-                <li>Focus on building financial confidence - 69% cite lack of confidence as a barrier to financial decision-making</li>
+                <li>
+                  Position as a partner in financial improvisation - 82% value
+                  banking relationships that adapt to their changing needs
+                </li>
+                <li>
+                  Emphasize the combination of digital tools with human expertise -
+                  72% prefer this hybrid approach
+                </li>
+                <li>
+                  Focus on building financial confidence - 69% cite lack of
+                  confidence as a barrier to financial decision-making
+                </li>
               </ul>
             </div>
+  
+            {/* Segment-Specific Focus */}
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-2 text-green-800">Segment-Specific Focus</h3>
+              <h3 className="font-semibold text-lg mb-2 text-green-800">
+                Segment-Specific Focus
+              </h3>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Gen Z: Education + micro-tools with immediate feedback - 65% use digital tools for money management</li>
-                <li>Millennials: Goal-based tools balanced with lifestyle management - 52% value digital banking with human support</li>
-                <li>Hispanic: Family-oriented financial tools and bilingual support - 47% emphasize family financial planning</li>
-                <li>Small Business: Clear separation of business/personal with specialized advice - 59% prioritize this separation</li>
-                <li>Emerging Affluent: Wealth-building tools with premium features - 78% invest regularly as part of their financial strategy</li>
+                <li>
+                  Gen Z: Education + micro-tools with immediate feedback - 65% use
+                  digital tools for money management
+                </li>
+                <li>
+                  Millennials: Goal-based tools balanced with lifestyle management
+                  - 52% value digital banking with human support
+                </li>
+                <li>
+                  Hispanic: Family-oriented financial tools and bilingual support -
+                  47% emphasize family financial planning
+                </li>
+                <li>
+                  Small Business: Clear separation of business/personal with
+                  specialized advice - 59% prioritize this separation
+                </li>
+                <li>
+                  Emerging Affluent: Wealth-building tools with premium features -
+                  78% invest regularly as part of their financial strategy
+                </li>
               </ul>
             </div>
           </div>
