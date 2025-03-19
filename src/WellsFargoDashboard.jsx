@@ -2042,8 +2042,8 @@ const WellsFargoDashboard = () => {
                   <p className="text-gray-600 text-sm font-medium uppercase tracking-wide">
                     Overall Sentiment
                   </p>
-                  <p className="text-3xl font-bold text-green-500 my-2">+10%</p>
-                  <p className="text-xs text-gray-500">slightly positive attitude</p>
+                  <p className="text-3xl font-bold text-green-500 my-2">+0.1%</p>
+                  <p className="text-xs text-gray-500">neutral attitude</p>
                 </div>
   
                 {/* Total Respondents */}
